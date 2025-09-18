@@ -1,0 +1,42 @@
+# GitHub Pages Configuration
+title: "Your Name - Personal Homepage"
+description: "Academic personal homepage showcasing research and publications"
+url: "https://yourusername.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+
+# Include files
+include:
+  - _pages
+
+# Plugin settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO settings
+author: "Your Name"
+twitter:
+  username: yourusername
+social:
+  name: Your Name
+  links:
+    - https://twitter.com/yourusername
+    - https://github.com/yourusername
+    - https://scholar.google.com/citations?hl=zh-CN&user=xKOhjOkAAAAJ
