@@ -179,7 +179,7 @@ function createPublicationHTML(pub, isFirstAuthor = false) {
         // Check if Zihan Ma= is the first author or co-first
         const authorsList = pub.authors.split(',').map(author => author.trim());
         const zihanPosition = authorsList.findIndex(author => author.includes('Zihan Ma='));
-        badgeText = zihanPosition === 0 ? 'First Author' : 'Co-First Author';
+        badgeText = zihanPosition === 0 ? 'First Author' : 'Co-Author';
     }
     const badgeHTML = isFirstAuthor ? `<div class="first-author-badge">${badgeText}</div>` : '';
     

@@ -256,7 +256,7 @@ body {
 
 .first-author-badge {
     position: absolute;
-    top: 15px;
+    bottom: 15px;
     right: 15px;
     background: #e74c3c;
     color: white;
@@ -268,7 +268,7 @@ body {
 
 .ccf-badge {
     position: absolute;
-    top: 15px;
+    bottom: 15px;
     right: 140px;
     background: linear-gradient(135deg, #FFD700, #FFA500);
     color: white;
