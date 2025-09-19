@@ -174,14 +174,26 @@ function createPublicationHTML(pub, isFirstAuthor = false) {
     }
 
     // Check author position to determine badge text
-    let badgeText = 'First Author';
-    if (isFirstAuthor && pub.authors.includes('Zihan Ma=')) {
-        // Check if Zihan Ma= is the first author or co-first
-        const authorsList = pub.authors.split(',').map(author => author.trim());
-        const zihanPosition = authorsList.findIndex(author => author.includes('Zihan Ma='));
-        badgeText = zihanPosition === 0 ? 'First Author' : 'Co-Author';
+    let badgeText = '';
+    let showBadge = false;
+    
+    if (isFirstAuthor) {
+        // For first author papers
+        badgeText = 'First Author';
+        if (pub.authors.includes('Zihan Ma=')) {
+            // Check if Zihan Ma= is the first author or co-first
+            const authorsList = pub.authors.split(',').map(author => author.trim());
+            const zihanPosition = authorsList.findIndex(author => author.includes('Zihan Ma='));
+            badgeText = zihanPosition === 0 ? 'First Author' : 'Co-Author';
+        }
+        showBadge = true;
+    } else {
+        // For co-authored papers, always show Co-Author badge
+        badgeText = 'Co-Author';
+        showBadge = true;
     }
-    const badgeHTML = isFirstAuthor ? `<div class="first-author-badge">${badgeText}</div>` : '';
+    
+    const badgeHTML = showBadge ? `<div class="first-author-badge">${badgeText}</div>` : '';
     
     // CCF rating badge
     const ccfBadgeHTML = pub.ccf ? `<div class="ccf-badge ccf-${pub.ccf.toLowerCase().replace('-', '')}">${pub.ccf}</div>` : '';
