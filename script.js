@@ -357,7 +357,6 @@ function copyEmail() {
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     populatePublications();
-    updateLastUpdated();
     handleProfileImageError();
     addSmoothScrolling();
     addScrollAnimations();
