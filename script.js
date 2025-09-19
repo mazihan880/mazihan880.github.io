@@ -178,13 +178,15 @@ function createPublicationHTML(pub, isFirstAuthor = false) {
     let showBadge = false;
     
     if (isFirstAuthor) {
-        // For first author papers
-        badgeText = 'First Author';
+        // For first author papers, check Zihan Ma's position
         if (pub.authors.includes('Zihan Ma=')) {
             // Check if Zihan Ma= is the first author or co-first
             const authorsList = pub.authors.split(',').map(author => author.trim());
             const zihanPosition = authorsList.findIndex(author => author.includes('Zihan Ma='));
-            badgeText = zihanPosition === 0 ? 'First Author' : 'Co-Author';
+            badgeText = zihanPosition === 0 ? 'First Author' : 'Co-First Author';
+        } else {
+            // If no Zihan Ma= found, default to First Author
+            badgeText = 'First Author';
         }
         showBadge = true;
     } else {
