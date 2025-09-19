@@ -191,6 +191,20 @@ body {
     color: #555;
 }
 
+.about-content a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.about-content a:hover {
+    color: #0056b3;
+    border-bottom: 1px solid #007bff;
+    text-decoration: none;
+}
+
 /* Research Interests */
 .interests-list {
     list-style: none;
