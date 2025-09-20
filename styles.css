@@ -244,20 +244,6 @@ body {
     border-bottom: none;
 }
 
-.news-list a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: 500;
-    border-bottom: 1px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.news-list a:hover {
-    color: #0056b3;
-    border-bottom: 1px solid #007bff;
-    text-decoration: none;
-}
-
 /* Publications Section */
 .publications-subsection {
     margin-bottom: 40px;
