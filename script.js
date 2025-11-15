@@ -3,7 +3,7 @@ const firstAuthorPapers = [
         {
             title: "Graphing the Truth: Harnessing Causal Insights for Advanced Multimodal Fake News Detection",
             authors: "Zihan Ma, Minnan Luo, Zhi Zeng, Herun Wan, Yifei Li, Xiang Zhao",
-            venue: "IEEE TIFS",
+            venue: "IEEE Transactions on Information Forensics and Security‌",
             year: "2025",
             ccf: "CCF-A",
             links: {
