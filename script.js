@@ -1,6 +1,28 @@
 // Publications data
 const firstAuthorPapers = [
         {
+            title: "Graphing the Truth: Harnessing Causal Insights for Advanced Multimodal Fake News Detection",
+            authors: "Zihan Ma, Minnan Luo, Zhi Zeng, Herun Wan, Yifei Li, Xiang Zhao",
+            venue: "IEEE TIFS",
+            year: "2025",
+            ccf: "CCF-A",
+            links: {
+                paper: "#",
+                code: "#"
+            }
+        },
+        {
+            title: "How Brittle is Agent Safety? Rethinking Agent Risk under Intent Concealment and Task Complexity",
+            authors: "Zihan Ma=, Dongsheng Zhu=, Shudong Liu, Taolin Zhang, Junnan Liu, Qingqiu Li, Minnan Luo, Songyang Zhang, Kai Chen",
+            venue: "arXiv preprint",
+            year: "2025",
+            ccf: "preprint",
+            links: {
+                paper: "https://arxiv.org/abs/2511.08487",
+                code: "https://github.com/open-compass/OASIS"
+            }
+        },
+        {
             title: "Rethinking Verification for LLM Code Generation: From Generation to Testing",
             authors: "Zihan Ma=, Taolin Zhang=, Maosong Cao, Junnan Liu, Wenwei Zhang, Minnan Luo, Songyang Zhang, Kai Chen",
             venue: "NeurIPS 2025",
