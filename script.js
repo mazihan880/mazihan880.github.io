@@ -104,6 +104,28 @@ const collaborativePapers = [
             }
         },
         {
+            title: "ATLAS: A High-Difficulty, Multidisciplinary Benchmark for Frontier Scientific Reasoning",
+            authors: "Zihan Ma as a Project Contributor in the Team",
+            venue: "arXiv preprint",
+            year: "2025",
+            ccf: "preprint",
+            links: {
+                paper: "https://arxiv.org/pdf/2511.14366",
+                code: "#"
+            }
+        },
+        {
+            title: "Understand, Refine and Summarize: Multi-View Knowledge Progressive Enhancement Learning for Fake News Video Detection",
+            authors: "Zhi Zeng, Jiaying Wu, Minnan Luo, Xiangzheng Kong, Zihan Ma, Guang Dai, Qinghua Zheng",
+            venue: "ACM MM 2025",
+            year: "2025",
+            ccf: "CCF-A",
+            links: {
+                paper: "https://dl.acm.org/doi/abs/10.1145/3746027.3754551",
+                code: "#"
+            }
+        },
+        {
             title: "How Do Social Bots Participate in Misinformation Spread? A Comprehensive Dataset and Analysis",
             authors: "Herun Wan, Minnan Luo, Zihan Ma, Guang Dai, Xiang Zhao",
             venue: "EMNLP2025",
