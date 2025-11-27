@@ -7,8 +7,8 @@ const firstAuthorPapers = [
             year: "2025",
             ccf: "CCF-A",
             links: {
-                paper: "#",
-                code: "#"
+                paper: "https://ieeexplore.ieee.org/document/11269908",
+                code: "https://github.com/mazihan880/DICE_Code"
             }
         },
         {
