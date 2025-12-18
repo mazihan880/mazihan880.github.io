@@ -31,7 +31,9 @@ const firstAuthorPapers = [
             links: {
                 paper: "https://arxiv.org/abs/2507.06920",
                 code: "https://github.com/open-compass/SAGA"
-            }
+            },
+            repo: "open-compass/SAGA",
+            hf_dataset: "opencompass/CodeForce_SAGA"
         },
         {
             title: "Bridging Interests and Truth: Towards Mitigating Fake News with Personalized and Truthful Recommendations",
@@ -64,7 +66,8 @@ const firstAuthorPapers = [
             links: {
                 paper: "https://arxiv.org/abs/2412.14686",
                 code: "https://github.com/mazihan880/AMG-An-Attributing-Multi-modal-Fake-News-Dataset"
-            }
+            },
+            repo: "mazihan880/AMG-An-Attributing-Multi-modal-Fake-News-Dataset"
         },
         {
             title: "Event-Radar: Event-driven Multi-View Learning for Multimodal Fake News Detection",
@@ -75,7 +78,8 @@ const firstAuthorPapers = [
             links: {
                 paper: "https://aclanthology.org/2024.acl-long.316/",
                 code: "https://github.com/mazihan880/Event-Radar"
-            }
+            },
+            repo: "mazihan880/Event-Radar"
         },
         {
             title: "Learning multimodal attention mixed with frequency domain information as detector for fake news detection",
@@ -244,6 +248,24 @@ function createPublicationHTML(pub, isFirstAuthor = false) {
     // CCF rating badge
     const ccfBadgeHTML = pub.ccf ? `<div class="ccf-badge ccf-${pub.ccf.toLowerCase().replace('-', '')}">${pub.ccf}</div>` : '';
 
+    // Stats Badges
+    let statsHTML = '';
+    if (pub.repo || pub.hf_dataset) {
+        statsHTML = '<div class="publication-stats" style="margin-top: 8px; display: flex; gap: 15px; font-size: 0.9em; color: #666;">';
+        
+        if (pub.repo) {
+            const repoId = pub.repo.replace(/\//g, '-');
+            statsHTML += `<span id="stars-${repoId}" class="stat-badge"><i class="fab fa-github"></i> Stars: ...</span>`;
+        }
+        
+        if (pub.hf_dataset) {
+             const hfId = pub.hf_dataset.replace(/\//g, '-');
+            statsHTML += `<span id="downloads-${hfId}" class="stat-badge"><i class="fas fa-download"></i> HF Downloads: ...</span>`;
+        }
+        
+        statsHTML += '</div>';
+    }
+
     return `
         <div class="publication-item ${isFirstAuthor ? 'first-author' : ''}">
             ${badgeHTML}
@@ -252,8 +274,60 @@ function createPublicationHTML(pub, isFirstAuthor = false) {
             <div class="publication-authors">${pub.authors}</div>
             <div class="publication-venue">${pub.venue}</div>
             <div class="publication-links">${linksHTML}</div>
+            ${statsHTML}
         </div>
     `;
+}
+
+// Function to fetch GitHub Stars
+async function fetchGitHubStars(repo) {
+    try {
+        const response = await fetch(`https://api.github.com/repos/${repo}`);
+        if (!response.ok) return null;
+        const data = await response.json();
+        return data.stargazers_count;
+    } catch (error) {
+        console.error('Error fetching stars for', repo, error);
+        return null;
+    }
+}
+
+// Function to fetch Hugging Face Downloads
+async function fetchHuggingFaceDownloads(dataset) {
+    try {
+        const response = await fetch(`https://huggingface.co/api/datasets/${dataset}`);
+        if (!response.ok) return null;
+        const data = await response.json();
+        return data.downloads;
+    } catch (error) {
+        console.error('Error fetching downloads for', dataset, error);
+        return null;
+    }
+}
+
+// Function to update stats
+async function updateStats() {
+    const allPapers = [...firstAuthorPapers, ...collaborativePapers];
+    for (const pub of allPapers) {
+        if (pub.repo) {
+            fetchGitHubStars(pub.repo).then(stars => {
+                if (stars !== null) {
+                    const repoId = pub.repo.replace(/\//g, '-');
+                    const el = document.getElementById(`stars-${repoId}`);
+                    if (el) el.innerHTML = `<i class="fab fa-github"></i> Stars: ${stars}`;
+                }
+            });
+        }
+        if (pub.hf_dataset) {
+            fetchHuggingFaceDownloads(pub.hf_dataset).then(downloads => {
+                if (downloads !== null) {
+                     const hfId = pub.hf_dataset.replace(/\//g, '-');
+                     const el = document.getElementById(`downloads-${hfId}`);
+                     if (el) el.innerHTML = `<i class="fas fa-download"></i> HF Downloads: ${downloads}`;
+                }
+            });
+        }
+    }
 }
 
 // Function to populate publications
@@ -272,6 +346,9 @@ function populatePublications() {
             .map(pub => createPublicationHTML(pub, false))
             .join('');
     }
+    
+    // Trigger stats update
+    updateStats();
 }
 
 // Function to update last updated date
