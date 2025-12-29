@@ -246,7 +246,18 @@ function createPublicationHTML(pub, isFirstAuthor = false) {
     const badgeHTML = showBadge ? `<div class="first-author-badge">${badgeText}</div>` : '';
     
     // CCF rating badge
-    const ccfBadgeHTML = pub.ccf ? `<div class="ccf-badge ccf-${pub.ccf.toLowerCase().replace('-', '')}">${pub.ccf}</div>` : '';
+    let ccfClass = '';
+    if (pub.ccf) {
+        if (pub.ccf.includes('CCF-A')) ccfClass = 'ccfa';
+        else if (pub.ccf.includes('CCF-B')) ccfClass = 'ccfb';
+        else if (pub.ccf.toLowerCase().includes('preprint')) ccfClass = 'preprint';
+        else ccfClass = 'other';
+    }
+    const ccfBadgeHTML = pub.ccf ? `<div class="ccf-badge ${ccfClass}">${pub.ccf}</div>` : '';
+
+    // Wrap badges in a container
+    const badgesContainerHTML = (badgeHTML || ccfBadgeHTML) ? 
+        `<div class="badges-container">${badgeHTML}${ccfBadgeHTML}</div>` : '';
 
     // Stats Badges
     let statsHTML = '';
@@ -268,8 +279,7 @@ function createPublicationHTML(pub, isFirstAuthor = false) {
 
     return `
         <div class="publication-item ${isFirstAuthor ? 'first-author' : ''}">
-            ${badgeHTML}
-            ${ccfBadgeHTML}
+            ${badgesContainerHTML}
             <div class="publication-title">${pub.title}</div>
             <div class="publication-authors">${pub.authors}</div>
             <div class="publication-venue">${pub.venue}</div>
@@ -282,12 +292,20 @@ function createPublicationHTML(pub, isFirstAuthor = false) {
 // Function to fetch GitHub Stars
 async function fetchGitHubStars(repo) {
     try {
-        const response = await fetch(`https://api.github.com/repos/${repo}`);
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 3000); // 3s timeout
+        
+        const response = await fetch(`https://api.github.com/repos/${repo}`, {
+            signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+        
         if (!response.ok) return null;
         const data = await response.json();
         return data.stargazers_count;
     } catch (error) {
-        console.error('Error fetching stars for', repo, error);
+        // Silently fail or log warning if needed, but avoid cluttering console for network errors
+        // console.warn('Could not fetch stars for', repo);
         return null;
     }
 }
@@ -295,12 +313,19 @@ async function fetchGitHubStars(repo) {
 // Function to fetch Hugging Face Downloads
 async function fetchHuggingFaceDownloads(dataset) {
     try {
-        const response = await fetch(`https://huggingface.co/api/datasets/${dataset}`);
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 3000); // 3s timeout
+
+        const response = await fetch(`https://huggingface.co/api/datasets/${dataset}`, {
+            signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+
         if (!response.ok) return null;
         const data = await response.json();
         return data.downloads;
     } catch (error) {
-        console.error('Error fetching downloads for', dataset, error);
+        // Silently fail
         return null;
     }
 }
@@ -374,17 +399,18 @@ function handleProfileImageError() {
             this.style.display = 'none';
             const placeholder = document.createElement('div');
             placeholder.style.cssText = `
-                width: 180px;
-                height: 180px;
+                width: 200px;
+                height: 200px;
                 border-radius: 50%;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 color: white;
                 font-size: 3rem;
                 font-weight: bold;
-                border: 4px solid #e0e0e0;
+                border: 4px solid white;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             `;
             placeholder.textContent = 'YN'; // You can change this to your initials
             this.parentNode.appendChild(placeholder);
@@ -448,11 +474,12 @@ function addCopyEmailFeature() {
                     position: absolute;
                     background: #2c3e50;
                     color: white;
-                    padding: 5px 10px;
-                    border-radius: 4px;
-                    font-size: 12px;
+                    padding: 6px 12px;
+                    border-radius: 6px;
+                    font-size: 0.85rem;
                     z-index: 1000;
                     pointer-events: none;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
                 `;
                 document.body.appendChild(tooltip);
                 
@@ -482,21 +509,6 @@ document.addEventListener('DOMContentLoaded', function() {
     addSmoothScrolling();
     addScrollAnimations();
     addCopyEmailFeature();
-});
-
-// Add some interactive features
-document.addEventListener('DOMContentLoaded', function() {
-    // Add hover effect to publication items
-    const publicationItems = document.querySelectorAll('.publication-item');
-    publicationItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateX(5px) scale(1.02)';
-        });
-        
-        item.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateX(0) scale(1)';
-        });
-    });
 });
 
 // Export functions for potential external use
