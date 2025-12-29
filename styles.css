@@ -45,8 +45,8 @@ body {
 
 /* Header Styles */
 .header {
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+    margin-bottom: 0;
+    padding-bottom: 20px;
     border-bottom: 1px solid var(--border-color);
     animation: fadeInDown 0.8s ease-out;
 }
@@ -66,7 +66,7 @@ body {
 .profile-image img {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 8px; /* Square with slight radius */
     object-fit: cover;
     border: 4px solid white;
     box-shadow: var(--shadow-lg);
@@ -141,13 +141,13 @@ body {
 .navbar {
     background-color: rgba(250, 250, 250, 0.95);
     border-bottom: 1px solid var(--border-color);
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     position: sticky;
     top: 0;
     z-index: 100;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    height: 60px;
+    height: 48px;
     display: flex;
     align-items: center;
 }
@@ -166,15 +166,8 @@ body {
     padding: 0;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap; /* Allow wrapping if needed, but spacing is reduced to fit */
     gap: 0;
-    overflow-x: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.nav-menu::-webkit-scrollbar {
-    display: none;
 }
 
 .nav-item {
@@ -185,8 +178,8 @@ body {
 
 .nav-item:not(:last-child)::after {
     content: "|";
-    color: #cbd5e1; /* Light gray separator */
-    margin: 0 20px;
+    color: #cbd5e1;
+    margin: 0 8px; /* Reduced spacing */
     font-size: 0.9rem;
     font-weight: 300;
 }
@@ -198,7 +191,8 @@ body {
     font-weight: 500;
     font-size: 1rem;
     transition: color 0.2s ease;
-    padding: 5px 0;
+    padding: 2px 0;
+    border-radius: 2px; /* Square corners */
 }
 
 .nav-link:hover {
@@ -365,26 +359,26 @@ body {
     gap: 30px;
 }
 
+/* Publication Styles */
 .publication-item {
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    transition: var(--transition);
-    position: relative;
-    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: 4px; /* Square corners */
     box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
 }
 
 .publication-item:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: var(--shadow-md);
+    border-color: var(--highlight-color);
 }
 
-/* Removed the colorful left borders for a cleaner look */
 .publication-item.first-author {
-    /* Subtle distinction for first author */
-    background: linear-gradient(to bottom right, #ffffff, #fafafa);
     border-left: 4px solid var(--highlight-color);
 }
 
@@ -438,28 +432,34 @@ body {
     border-color: var(--text-primary);
 }
 
-.first-author-badge {
-    display: none; /* Removed for cleaner look, handled by border-left */
-}
-
-/* Refined Badges */
 .badges-container {
     display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 12px;
+}
+
+.first-author-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--highlight-color);
+    border-radius: 2px; /* Square corners */
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
 .ccf-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 4px 10px;
-    border-radius: 6px;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 2px; /* Square corners */
     font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: 0.025em;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .ccf-badge.ccfa {
@@ -487,14 +487,32 @@ body {
     gap: 30px;
 }
 
+/* Education & Experience Styles */
 .education-item, .experience-item {
-    display: flex;
-    gap: 30px;
-    padding: 0;
-    background: transparent;
-    border: none;
-    border-left: none; /* Removing the thick left border */
-    position: relative;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: 4px; /* Square corners */
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.education-degree {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.education-school {
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.education-supervisor {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
 }
 
 /* Add a timeline line */

@@ -255,11 +255,9 @@ function createPublicationHTML(pub, isFirstAuthor = false) {
     }
     const ccfBadgeHTML = pub.ccf ? `<div class="ccf-badge ${ccfClass}">${pub.ccf}</div>` : '';
 
-    // Wrap badges in a container
     const badgesContainerHTML = (badgeHTML || ccfBadgeHTML) ? 
         `<div class="badges-container">${badgeHTML}${ccfBadgeHTML}</div>` : '';
 
-    // Stats Badges
     let statsHTML = '';
     if (pub.repo || pub.hf_dataset) {
         statsHTML = '<div class="publication-stats" style="margin-top: 8px; display: flex; gap: 15px; font-size: 0.9em; color: #666;">';
@@ -289,69 +287,89 @@ function createPublicationHTML(pub, isFirstAuthor = false) {
     `;
 }
 
-// Function to fetch GitHub Stars
 async function fetchGitHubStars(repo) {
-    try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 3000); // 3s timeout
-        
-        const response = await fetch(`https://api.github.com/repos/${repo}`, {
-            signal: controller.signal
-        });
-        clearTimeout(timeoutId);
-        
-        if (!response.ok) return null;
-        const data = await response.json();
-        return data.stargazers_count;
-    } catch (error) {
-        // Silently fail or log warning if needed, but avoid cluttering console for network errors
-        // console.warn('Could not fetch stars for', repo);
-        return null;
+    const url = `https://img.shields.io/github/stars/${repo}.json`;
+    const delaysMs = [0, 400, 1000, 2000];
+
+    for (const delayMs of delaysMs) {
+        if (delayMs > 0) {
+            await new Promise(resolve => setTimeout(resolve, delayMs));
+        }
+
+        try {
+            const response = await fetch(url, { cache: 'no-store' });
+            if (!response.ok) continue;
+
+            const data = await response.json();
+            const raw = (data && (data.value ?? data.message)) ? String(data.value ?? data.message) : '';
+            const normalized = raw.trim().toLowerCase();
+
+            const match = normalized.match(/^(\d+(\.\d+)?)(k|m)?$/);
+            if (!match) return null;
+
+            const num = Number(match[1]);
+            const unit = match[3];
+            if (!Number.isFinite(num)) return null;
+
+            if (unit === 'k') return Math.round(num * 1000);
+            if (unit === 'm') return Math.round(num * 1000000);
+            return Math.round(num);
+        } catch (e) {
+        }
     }
+
+    return null;
 }
 
-// Function to fetch Hugging Face Downloads
 async function fetchHuggingFaceDownloads(dataset) {
     try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 3000); // 3s timeout
-
-        const response = await fetch(`https://huggingface.co/api/datasets/${dataset}`, {
-            signal: controller.signal
-        });
-        clearTimeout(timeoutId);
-
+        const response = await fetch(`https://huggingface.co/api/datasets/${dataset}`);
         if (!response.ok) return null;
         const data = await response.json();
         return data.downloads;
     } catch (error) {
-        // Silently fail
         return null;
     }
 }
 
-// Function to update stats
 async function updateStats() {
     const allPapers = [...firstAuthorPapers, ...collaborativePapers];
+    
+    let hasPending = false;
     for (const pub of allPapers) {
         if (pub.repo) {
-            fetchGitHubStars(pub.repo).then(stars => {
+            try {
+                const stars = await fetchGitHubStars(pub.repo);
                 if (stars !== null) {
                     const repoId = pub.repo.replace(/\//g, '-');
                     const el = document.getElementById(`stars-${repoId}`);
                     if (el) el.innerHTML = `<i class="fab fa-github"></i> Stars: ${stars}`;
+                } else {
+                    hasPending = true;
                 }
-            });
+            } catch (e) {
+                hasPending = true;
+            }
         }
+        
         if (pub.hf_dataset) {
-            fetchHuggingFaceDownloads(pub.hf_dataset).then(downloads => {
+            try {
+                const downloads = await fetchHuggingFaceDownloads(pub.hf_dataset);
                 if (downloads !== null) {
                      const hfId = pub.hf_dataset.replace(/\//g, '-');
                      const el = document.getElementById(`downloads-${hfId}`);
                      if (el) el.innerHTML = `<i class="fas fa-download"></i> HF Downloads: ${downloads}`;
+                } else {
+                    hasPending = true;
                 }
-            });
+            } catch (e) {
+                hasPending = true;
+            }
         }
+    }
+
+    if (hasPending) {
+        setTimeout(updateStats, 8000);
     }
 }
 
@@ -372,7 +390,6 @@ function populatePublications() {
             .join('');
     }
     
-    // Trigger stats update
     updateStats();
 }
 
