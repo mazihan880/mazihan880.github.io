@@ -33,7 +33,7 @@ const firstAuthorPapers = [
                 code: "https://github.com/open-compass/SAGA"
             },
             repo: "open-compass/SAGA",
-            hf_dataset: "opencompass/CodeForce_SAGA"
+            hf_datasets: ["opencompass/CodeForce_SAGA", "opencompass/CodeCompass"]
         },
         {
             title: "Bridging Interests and Truth: Towards Mitigating Fake News with Personalized and Truthful Recommendations",
@@ -259,7 +259,11 @@ function createPublicationHTML(pub, isFirstAuthor = false) {
         `<div class="badges-container">${badgeHTML}${ccfBadgeHTML}</div>` : '';
 
     let statsHTML = '';
-    if (pub.repo || pub.hf_dataset) {
+    const hfDatasetsForStats = Array.isArray(pub.hf_datasets)
+        ? pub.hf_datasets
+        : (pub.hf_dataset ? [pub.hf_dataset] : []);
+
+    if (pub.repo || hfDatasetsForStats.length > 0) {
         statsHTML = '<div class="publication-stats" style="margin-top: 8px; display: flex; gap: 15px; font-size: 0.9em; color: #666;">';
         
         if (pub.repo) {
@@ -267,8 +271,11 @@ function createPublicationHTML(pub, isFirstAuthor = false) {
             statsHTML += `<span id="stars-${repoId}" class="stat-badge"><i class="fab fa-github"></i> Stars: ...</span>`;
         }
         
-        if (pub.hf_dataset) {
-             const hfId = pub.hf_dataset.replace(/\//g, '-');
+        if (hfDatasetsForStats.length > 0) {
+            const hfId = hfDatasetsForStats
+                .join('__')
+                .replace(/\//g, '-')
+                .replace(/[^a-zA-Z0-9_-]/g, '-');
             statsHTML += `<span id="downloads-${hfId}" class="stat-badge"><i class="fas fa-download"></i> HF Downloads: ...</span>`;
         }
         
@@ -359,6 +366,35 @@ async function updateStats() {
                      const hfId = pub.hf_dataset.replace(/\//g, '-');
                      const el = document.getElementById(`downloads-${hfId}`);
                      if (el) el.innerHTML = `<i class="fas fa-download"></i> HF Downloads: ${downloads}`;
+                } else {
+                    hasPending = true;
+                }
+            } catch (e) {
+                hasPending = true;
+            }
+        }
+
+        if (Array.isArray(pub.hf_datasets) && pub.hf_datasets.length > 0) {
+            try {
+                let total = 0;
+                let ok = true;
+
+                for (const dataset of pub.hf_datasets) {
+                    const downloads = await fetchHuggingFaceDownloads(dataset);
+                    if (downloads === null) {
+                        ok = false;
+                        break;
+                    }
+                    total += downloads;
+                }
+
+                if (ok) {
+                    const hfId = pub.hf_datasets
+                        .join('__')
+                        .replace(/\//g, '-')
+                        .replace(/[^a-zA-Z0-9_-]/g, '-');
+                    const el = document.getElementById(`downloads-${hfId}`);
+                    if (el) el.innerHTML = `<i class="fas fa-download"></i> HF Downloads: ${total}`;
                 } else {
                     hasPending = true;
                 }
