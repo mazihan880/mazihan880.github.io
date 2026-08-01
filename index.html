@@ -1,245 +1,502 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="expires" content="0">
-    <meta http-equiv="pragma" content="no-cache">
-    <title>Zihan Ma's Home Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Zihan Ma is a PhD researcher working on trustworthy AI, LLM code evaluation, agent safety, and multimodal misinformation.">
+    <meta property="og:title" content="Zihan Ma — Trustworthy AI Researcher">
+    <meta property="og:description" content="Research in reliable code generation, agent safety, and multimodal misinformation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mazihan880.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Zihan Ma — Trustworthy AI Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <div class="profile-section">
-                <div class="profile-image">
-                    <img src="profile.jpg" alt="Zihan Ma" id="profile-img">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+        <a class="wordmark" href="#home" aria-label="Zihan Ma, home">
+            <span aria-hidden="true"><img src="assets/icons/shield-check.svg" alt=""></span>
+            <small>Research / 2026</small>
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="#about">About</a>
+            <a href="#news">News</a>
+            <a href="#publications">Research</a>
+            <a href="#journey">Journey</a>
+            <a href="#recognition">Recognition</a>
+        </div>
+        <div class="nav-actions">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+                <span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main">
+        <header class="hero section-shell" id="home">
+            <div class="hero-portrait reveal">
+                <div class="portrait-frame">
+                    <img src="assets/profile-coast-edited-v2.jpg" alt="Portrait of Zihan Ma by the coast" fetchpriority="high">
+                    <span class="portrait-index" aria-hidden="true">01</span>
                 </div>
-                <div class="profile-info">
-                    <h1 class="name">Zihan Ma</h1>
-                    <p class="title">PhD Student</p>
-                    <p class="affiliation">Xi'an Jiaotong University (XJTU)</p>
-                    <div class="contact-links">
-                        <a href="mailto:mazihan880@stu.xjtu.edu.cn" class="contact-link">
-                            <i class="fas fa-envelope"></i> Email
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" class="contact-link" target="_blank">
-                            <i class="fas fa-graduation-cap"></i> Google Scholar
-                        </a>
-                        <a href="https://github.com/mazihan880" class="contact-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://huggingface.co/MichaelErchi" class="contact-link" target="_blank">
-                            <i class="fas fa-robot"></i> Hugging Face
-                        </a>
-                        <a href="https://x.com/mazihan880" class="contact-link" target="_blank">
-                            <i class="fab fa-twitter"></i> Twitter
-                        </a>
-                    </div>
+                <div class="availability-card">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <p><strong>Seeking 2027 opportunities</strong><br>Preferred base · Xi’an<br>Expected graduation · Jun 2027</p>
+                    <span class="availability-arrow" aria-hidden="true">↗</span>
+                </div>
+            </div>
+
+            <div class="hero-copy reveal">
+                <p class="eyebrow">Zihan Ma · 马梓涵</p>
+                <h1>I build AI systems that deserve to be <em>trusted.</em></h1>
+                <p class="hero-deck">PhD researcher working across reliable code generation, agent safety, and multimodal misinformation — from better evaluation to more robust models.</p>
+
+                <div class="hero-affiliations">
+                    <p><span>PhD Student</span> Xi’an Jiaotong University</p>
+                    <p><span>Visiting PhD</span> Nanyang Technological University</p>
+                </div>
+
+                <div class="hero-links" aria-label="Profile links">
+                    <a href="mailto:mazihan880@stu.xjtu.edu.cn" data-copy-email="mazihan880@stu.xjtu.edu.cn" aria-label="Copy email address"><img src="assets/icons/mail.svg" alt="" aria-hidden="true">Email <span class="copy-feedback" data-copy-feedback data-default-text="↗" data-copied-text="Copied ✓" aria-live="polite">↗</span></a>
+                    <a href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener"><img src="assets/icons/google-scholar.svg" alt="" aria-hidden="true">Scholar <span>↗</span></a>
+                    <a href="https://github.com/mazihan880" target="_blank" rel="noopener"><img src="assets/icons/github.svg" alt="" aria-hidden="true">GitHub <span>↗</span></a>
+                    <a href="https://huggingface.co/MichaelErchi" target="_blank" rel="noopener"><img src="assets/icons/huggingface.svg" alt="" aria-hidden="true">Hugging Face <span>↗</span></a>
                 </div>
             </div>
         </header>
 
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <div class="nav-container">
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
-                    <li class="nav-item"><a href="#research" class="nav-link">Research Interests</a></li>
-                    <li class="nav-item"><a href="#news" class="nav-link">News</a></li>
-                    <li class="nav-item"><a href="#publications" class="nav-link">Publications</a></li>
-                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
-                    <li class="nav-item"><a href="#services" class="nav-link">Academic Services</a></li>
-                    <li class="nav-item"><a href="#awards" class="nav-link">Awards</a></li>
-                </ul>
+        <aside class="signal-bar" aria-label="Recent highlights">
+            <span class="signal-label">Latest signals</span>
+            <div class="signal-track">
+                <p><time datetime="2025-12">12.2025</time> China Association for Science and Technology Young Talent Program</p>
+                <p><time datetime="2025-11">11.2025</time> DICE accepted by IEEE TIFS</p>
+                <p><time datetime="2025-09">09.2025</time> SAGA accepted by NeurIPS 2025</p>
             </div>
-        </nav>
+        </aside>
 
-        <!-- About Section -->
-        <section id="about" class="section">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>
-                    I am a Ph.D. student at Xi'an Jiaotong University under the supervision of <a href="https://gr.xjtu.edu.cn/en/web/minnluo" target="_blank">Prof. Minnan Luo</a>, working on machine learning and artificial intelligence. 
-                    My research focuses on multimodal social network analysis and LLM evaluation, with applications to information security and social network analysis. Recently, I have been studying code generation and evaluation with LLMs.
-                </p>
-                <p>
-                    My work involves developing advanced machine learning methods for detecting and interpreting bots and misinformation in social networks, particularly leveraging large language models and multimodal techniques. 
-                    My research has been published at top-tier conferences such as NeurIPS, ACL, and SIGIR. 
-                    Previously, I was a research intern with the <a href="https://opencompass.org.cn/" target="_blank">OpenCompass team</a> at Shanghai AI Lab, mentored by <a href="https://www.zhangsongyang.com/" target="_blank">Songyang Zhang</a>.
-                </p>
-                <p>
-                    I am particularly interested in explainable AI, LLM-based code generation, agent safety, and the intersection of machine learning with social media analysis. 
-                    I am currently at Nanyang Technological University, Singapore, as a Visiting Ph.D. Student under the supervision of Assistant Prof. <a href="https://personal.ntu.edu.sg/wangwy/" target="_blank">Wenya Wang</a>. Meanwhile, I am collaborating with <a href="https://sites.google.com/site/linzhuoyi1995/PhD?authuser=0" target="_blank">Zhuoyi Lin</a> at I2R, A*STAR. I always welcome collaboration and exchange in these research areas.
-                </p>
-                <p><strong>I expect to graduate in June 2027 and am currently seeking job opportunities, with Xi'an as my preferred base.</strong></p>
+        <section class="about section-shell" id="about">
+            <div class="section-kicker reveal">
+                <span>02</span>
+                <p>Research compass</p>
             </div>
-        </section>
 
-        <!-- Research Interests Section -->
-        <section id="research" class="section">
-            <h2 class="section-title">Research Interests</h2>
-            <div class="research-interests">
-                <ul class="interests-list">
-                    <li>Natural Language Processing</li>
-                    <li>Misinformation Analysis</li>
-                    <li>LLM Code Generation</li>
-                    <li>Information Security and Trust</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- News Section -->
-        <section id="news" class="section">
-            <h2 class="section-title">🔥 News</h2>
-            <div class="news-content">
-                <ul class="news-list">
-                    <li><strong>[Dec 2025]:</strong> Selected for the 2025 China Association for Science and Technology Youth Science and Technology Talent Cultivation Project Doctoral Student Special Plan. (2025年中国科协青年科技人才培育工程博士生专项计划) 🎉</li>
-                    <li><strong>[Nov 2025]:</strong> Started as a Visiting Ph.D. Student at NTU. 🚀</li>
-                    <li><strong>[Nov 2025]:</strong> Our paper "How Brittle is Agent Safety? Rethinking Agent Risk under Intent Concealment and Task Complexity" is now available on arXiv. </li>
-                    <li><strong>[Nov 2025]:</strong> Our paper "Graphing the Truth: Harnessing Causal Insights for Advanced Multimodal Fake News Detection" has been accepted by IEEE TIFS 😄.</li>
-                    <li><strong>[Oct 2025]:</strong> Received the Outstanding Reviewer for ACM MM 2025! 🏆</li>
-                    <li><strong>[Sep 2025]:</strong> Our paper "Rethinking Verification for LLM Code Generation: From Generation to Testing" has been accepted by NeurIPS 2025! 🎉</li>
-                    <li><strong>[Apr 2025]:</strong> Our paper "Bridging Interests and Truth: Towards Mitigating Fake News with Personalized and Truthful Recommendations" has been accepted by SIGIR 2025! 🎊</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Publications Section -->
-        <section id="publications" class="section">
-            <h2 class="section-title">📝 Publications</h2>
-            
-            <!-- First Author Publications -->
-            <div class="publications-subsection">
-                <h3 class="subsection-title">First/Co-First Author Publications</h3>
-                <div class="publications-list" id="first-author-pubs">
-                    <!-- Publications will be populated here -->
+            <div class="about-grid">
+                <div class="about-statement reveal">
+                    <h2>My research focuses on reliable AI evaluation, agent safety, and multimodal misinformation.</h2>
+                    <p>I am a <strong>PhD student at Xi’an Jiaotong University</strong>, advised by <a href="https://gr.xjtu.edu.cn/en/web/minnluo" target="_blank" rel="noopener">Prof. Minnan Luo</a>. Our research group is part of the broader team led by <strong><a href="https://www.xjtu.edu.cn/jsnr.jsp?wbtreeid=1632&amp;wbwbxjtuteacherid=596" target="_blank" rel="noopener">Prof. Qinghua Zheng</a>, an Academician of the Chinese Academy of Engineering</strong>.</p>
+                    <p>My work examines where modern AI systems fail — <strong>weak code verification, concealed agent risk, and misleading multimodal content</strong> — then builds evaluation and learning methods that make those failures visible and actionable.</p>
+                    <p>I am currently a <strong>Visiting PhD Student at NTU</strong> with <a href="https://personal.ntu.edu.sg/wangwy/" target="_blank" rel="noopener">Asst. Prof. Wenya Wang</a>, and collaborate with <a href="https://sites.google.com/site/linzhuoyi1995/PhD" target="_blank" rel="noopener">Zhuoyi Lin</a> at I²R, A*STAR.</p>
+                    <p>From December 2024 to October 2025, I was a <strong>Research Intern with <a href="https://opencompass.org.cn/" target="_blank" rel="noopener">OpenCompass</a></strong> at Shanghai Artificial Intelligence Laboratory, working with <a href="https://www.zhangsongyang.com/" target="_blank" rel="noopener">Songyang Zhang</a> on large-model evaluation and reliable code-generation benchmarks.</p>
                 </div>
-            </div>
 
-            <!-- Co-authored Publications -->
-            <div class="publications-subsection">
-                <h3 class="subsection-title">Co-authored Publications</h3>
-                <div class="publications-list" id="coauthor-pubs">
-                    <!-- Publications will be populated here -->
+                <div class="research-themes reveal">
+                    <article>
+                        <span>01 / Reliability</span>
+                        <h3>LLM code evaluation</h3>
+                        <p>Adversarial tests, robust verifiers, and evaluation that reflects real programming ability.</p>
+                    </article>
+                    <article>
+                        <span>02 / Safety</span>
+                        <h3>Agent behavior</h3>
+                        <p>Benchmarks and sandboxes that expose hidden intent, complex workflows, and brittle safeguards.</p>
+                    </article>
+                    <article>
+                        <span>03 / Trust</span>
+                        <h3>Multimodal misinformation</h3>
+                        <p>Causal, event-aware, and manipulation-sensitive models for understanding deceptive content.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section id="education" class="section">
-            <h2 class="section-title">📖 Education</h2>
-            <div class="education-content">
-                <div class="education-item">
-                    <div class="education-period">2024 - Present</div>
-                    <div class="education-details">
-                        <div class="education-degree">Ph.D. Student</div>
-                        <div class="education-school">Computer Science and Technology, Xi'an Jiaotong University (XJTU)</div>
-                        <div class="education-supervisor"><em>Supervisor: Prof. <a href="https://gr.xjtu.edu.cn/web/minnluo" target="_blank">Minnan Luo</a></em></div>
-                    </div>
+        <section class="news section-shell" id="news">
+            <div class="news-heading reveal">
+                <div class="section-kicker"><span>03</span><p>News &amp; updates</p></div>
+                <h2>What I’ve been up to lately.</h2>
+            </div>
+
+            <div class="news-grid">
+                <ol class="news-list reveal" aria-label="Recent academic news">
+                    <li>
+                        <time datetime="2025-12">Dec 2025</time>
+                        <div><span>Honor</span><h3>🏅 I’m honored to be selected for the CAST Young Talent Cultivation Program.</h3><p>中国科协青年科技人才培育工程博士生专项计划。</p></div>
+                    </li>
+                    <li>
+                        <time datetime="2025-11">Nov 2025</time>
+                        <div><span>Current position</span><h3>🇸🇬 I started a new chapter as a Visiting PhD Student at NTU.</h3><p>I’m working on NLP and AI safety in Singapore with Asst. Prof. Wenya Wang.</p></div>
+                    </li>
+                    <li>
+                        <time datetime="2025-11">Nov 2025</time>
+                        <div><span>New preprint</span><h3>🛡️ We released OASIS, our new benchmark for agent safety.</h3><p>Our paper “How Brittle is Agent Safety?” is now available on arXiv with code.</p></div>
+                    </li>
+                    <li>
+                        <time datetime="2025-11">Nov 2025</time>
+                        <div><span>Journal acceptance</span><h3>📄 We’re glad that our DICE paper was accepted by IEEE TIFS.</h3><p>In “Graphing the Truth,” we study causal multimodal fake-news detection.</p></div>
+                    </li>
+                    <li>
+                        <time datetime="2025-10">Oct 2025</time>
+                        <div><span>Service</span><h3>🙌 I was named an Outstanding Reviewer at ACM Multimedia 2025.</h3><p>I’m grateful for the recognition and the opportunity to contribute to the community.</p></div>
+                    </li>
+                    <li>
+                        <time datetime="2025-09">Sep 2025</time>
+                        <div><span>Conference acceptance</span><h3>🧪 We’re excited that our SAGA paper was accepted by NeurIPS 2025.</h3><p>We rethink verification for LLM code generation through stronger testing.</p></div>
+                    </li>
+                    <li>
+                        <time datetime="2025-04">Apr 2025</time>
+                        <div><span>Conference acceptance</span><h3>🔎 We’re happy that our PRISM paper was accepted by SIGIR 2025.</h3><p>We explore personalized recommendation that balances user interests with truthfulness.</p></div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="publications section-shell" id="publications">
+            <div class="section-heading reveal">
+                <div>
+                    <div class="section-kicker"><span>04</span><p>Selected research</p></div>
+                    <h2>First &amp; co-first author work.</h2>
                 </div>
-                <div class="education-item">
-                    <div class="education-period">2022 - 2024</div>
-                    <div class="education-details">
-                        <div class="education-degree">Master-Ph.D. Program (Direct Entry)</div>
-                        <div class="education-school">Computer Science and Technology, Xi'an Jiaotong University (XJTU)</div>
-                        <div class="education-supervisor"><em>Supervisor: Prof. <a href="https://gr.xjtu.edu.cn/web/minnluo" target="_blank">Minnan Luo</a></em></div>
-                    </div>
+                <div class="publication-filter" role="group" aria-label="Filter publications">
+                    <button type="button" class="is-active" data-filter="all" aria-pressed="true">All <span>08</span></button>
+                    <button type="button" data-filter="code-agent" aria-pressed="false">Code &amp; agents <span>03</span></button>
+                    <button type="button" data-filter="misinformation" aria-pressed="false">Misinformation <span>05</span></button>
                 </div>
-                <div class="education-item">
-                    <div class="education-period">2018 - 2022</div>
-                    <div class="education-details">
-                        <div class="education-degree">Bachelor of Engineering</div>
-                        <div class="education-school">Electrical Engineering and Automation, Xi'an Jiaotong University (XJTU)</div>
+            </div>
+
+            <div class="publication-list">
+                <article class="pub-card reveal" data-topic="misinformation">
+                    <a class="pub-visual" href="https://ieeexplore.ieee.org/document/11269908" target="_blank" rel="noopener" aria-label="Read Graphing the Truth">
+                        <img src="assets/publications/dice.png" alt="DICE multimodal graph construction and causal disentanglement pipeline" loading="lazy">
+                        <span class="visual-label">Framework / DICE</span>
+                    </a>
+                    <div class="pub-copy">
+                        <div class="pub-meta"><span>IEEE TIFS · 2025</span><span class="ccf-mark ccf-a">CCF-A</span><span>First author</span><a class="citation-pill" data-citation data-scholar-title="Graphing the Truth: Harnessing Causal Insights for Advanced Multimodal Fake News Detection" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 2</a></div>
+                        <h3><a href="https://ieeexplore.ieee.org/document/11269908" target="_blank" rel="noopener">Graphing the Truth: Harnessing Causal Insights for Advanced Multimodal Fake News Detection</a></h3>
+                        <p class="authors"><strong>Zihan Ma</strong>, Minnan Luo, Zhi Zeng, Herun Wan, Yifei Li, Xiang Zhao</p>
+                        <p class="tldr"><span>TL;DR</span> DICE learns to separate causal multimodal signals from spurious bias with graph masks, improving robustness under domain and distribution shifts.</p>
+                        <div class="pub-links"><a href="https://ieeexplore.ieee.org/document/11269908" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/mazihan880/DICE_Code" target="_blank" rel="noopener">Code ↗</a></div>
                     </div>
+                    <span class="pub-number">01</span>
+                </article>
+
+                <article class="pub-card reveal" data-topic="code-agent">
+                    <a class="pub-visual" href="https://arxiv.org/abs/2511.08487" target="_blank" rel="noopener" aria-label="Read How Brittle is Agent Safety">
+                        <img src="assets/publications/oasis.png" alt="OASIS benchmark, agentic tool sandbox, and evaluation workflow" loading="lazy">
+                        <span class="visual-label">Workflow / OASIS</span>
+                    </a>
+                    <div class="pub-copy">
+                        <div class="pub-meta"><span>Preprint · 2025</span><span class="ccf-mark preprint">Preprint</span><span>Co-first author</span><a class="citation-pill" data-citation data-scholar-title="How Brittle is Agent Safety? Rethinking Agent Risk under Intent Concealment and Task Complexity" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 0</a></div>
+                        <h3><a href="https://arxiv.org/abs/2511.08487" target="_blank" rel="noopener">How Brittle is Agent Safety? Rethinking Agent Risk under Intent Concealment and Task Complexity</a></h3>
+                        <p class="authors"><strong>Zihan Ma*</strong>, Dongsheng Zhu*, Shudong Liu, Taolin Zhang, Junnan Liu, Qingqiu Li, Minnan Luo, Songyang Zhang, Kai Chen</p>
+                        <p class="tldr"><span>TL;DR</span> A two-axis benchmark and stateful sandbox reveal that concealed intent erodes safety, while capability limits can make harder tasks look deceptively safe.</p>
+                        <div class="pub-links"><a href="https://arxiv.org/abs/2511.08487" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/open-compass/OASIS" target="_blank" rel="noopener">Code ↗</a></div>
+                    </div>
+                    <span class="pub-number">02</span>
+                </article>
+
+                <article class="pub-card reveal" data-topic="code-agent">
+                    <a class="pub-visual" href="https://arxiv.org/abs/2507.06920" target="_blank" rel="noopener" aria-label="Read Rethinking Verification for LLM Code Generation">
+                        <img src="assets/publications/saga.png" alt="SAGA human-LLM collaborative test generation framework" loading="lazy">
+                        <span class="visual-label">Pipeline / SAGA</span>
+                    </a>
+                    <div class="pub-copy">
+                        <div class="pub-meta"><span>NeurIPS · 2025</span><span class="ccf-mark ccf-a">CCF-A</span><span>Co-first author</span><a class="citation-pill" data-citation data-scholar-title="Rethinking Verification for LLM Code Generation: From Generation to Testing" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 14</a></div>
+                        <h3><a href="https://arxiv.org/abs/2507.06920" target="_blank" rel="noopener">Rethinking Verification for LLM Code Generation: From Generation to Testing</a></h3>
+                        <p class="authors"><strong>Zihan Ma*</strong>, Taolin Zhang*, Maosong Cao, Junnan Liu, Wenwei Zhang, Minnan Luo, Songyang Zhang, Kai Chen</p>
+                        <p class="tldr"><span>TL;DR</span> SAGA combines correct programs and human bugs to synthesize diverse adversarial tests that catch failures missed by standard code benchmarks.</p>
+                        <div class="pub-links"><a href="https://arxiv.org/abs/2507.06920" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/open-compass/SAGA" target="_blank" rel="noopener">Code ↗</a><span class="live-stat" data-github-repo="open-compass/SAGA">GitHub stars · …</span><span class="live-stat" data-hf-datasets="opencompass/CodeForce_SAGA,opencompass/CodeCompass">HF downloads · …</span></div>
+                    </div>
+                    <span class="pub-number">03</span>
+                </article>
+
+                <article class="pub-card reveal" data-topic="misinformation">
+                    <a class="pub-visual" href="https://dl.acm.org/doi/10.1145/3726302.3729912" target="_blank" rel="noopener" aria-label="Read Bridging Interests and Truth">
+                        <img src="assets/publications/prism.png" alt="PRISM authenticity disentanglement and diffusion recommendation pipeline" loading="lazy">
+                        <span class="visual-label">Framework / PRISM</span>
+                    </a>
+                    <div class="pub-copy">
+                        <div class="pub-meta"><span>SIGIR · 2025</span><span class="ccf-mark ccf-a">CCF-A</span><span>First author</span><a class="citation-pill" data-citation data-scholar-title="Bridging Interests and Truth: Towards Mitigating Fake News with Personalized and Truthful Recommendations" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 1</a></div>
+                        <h3><a href="https://dl.acm.org/doi/10.1145/3726302.3729912" target="_blank" rel="noopener">Bridging Interests and Truth: Towards Mitigating Fake News with Personalized and Truthful Recommendations</a></h3>
+                        <p class="authors"><strong>Zihan Ma</strong>, Minnan Luo, Yiran Hao, Zhi Zeng, Xiangzheng Kong, Jiahao Wang</p>
+                        <p class="tldr"><span>TL;DR</span> PRISM uses veracity-aware representations and fake-news signals as negative diffusion prompts to balance user interests with truthful recommendations.</p>
+                        <div class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3726302.3729912" target="_blank" rel="noopener">Paper ↗</a></div>
+                    </div>
+                    <span class="pub-number">04</span>
+                </article>
+
+                <article class="pub-card reveal" data-topic="code-agent">
+                    <a class="pub-visual" href="https://arxiv.org/abs/2507.06138" target="_blank" rel="noopener" aria-label="Read Coding Triangle">
+                        <img src="assets/publications/coding-triangle.png" alt="Coding Triangle framework connecting editorials, code, and test cases" loading="lazy">
+                        <span class="visual-label">Framework / Code Triangle</span>
+                    </a>
+                    <div class="pub-copy">
+                        <div class="pub-meta"><span>Preprint · 2025</span><span class="ccf-mark preprint">Preprint</span><span>Co-first author</span><a class="citation-pill" data-citation data-scholar-title="Coding Triangle: How Does Large Language Model Understand Code?" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 2</a></div>
+                        <h3><a href="https://arxiv.org/abs/2507.06138" target="_blank" rel="noopener">Coding Triangle: How Does Large Language Model Understand Code?</a></h3>
+                        <p class="authors">Taolin Zhang*, <strong>Zihan Ma*</strong>, Maosong Cao, Junnan Liu, Songyang Zhang, Kai Chen</p>
+                        <p class="tldr"><span>TL;DR</span> Editorials, code, and tests expose LLM self-consistency — and the systematic gap between model cognition and the diversity of human programming.</p>
+                        <div class="pub-links"><a href="https://arxiv.org/abs/2507.06138" target="_blank" rel="noopener">Paper ↗</a></div>
+                    </div>
+                    <span class="pub-number">05</span>
+                </article>
+
+                <article class="pub-card reveal" data-topic="misinformation">
+                    <a class="pub-visual" href="https://ojs.aaai.org/index.php/AAAI/article/view/31999" target="_blank" rel="noopener" aria-label="Read Each Fake News is Fake in its Own Way">
+                        <img src="assets/publications/amg.png" alt="MGCA multi-view clue collection and alignment pipeline" loading="lazy">
+                        <span class="visual-label">Pipeline / MGCA</span>
+                    </a>
+                    <div class="pub-copy">
+                        <div class="pub-meta"><span>AAAI · 2025</span><span class="ccf-mark ccf-a">CCF-A</span><span>Co-first author</span><a class="citation-pill" data-citation data-scholar-title="Each fake news is fake in its own way: An attribution multi-granularity benchmark for multimodal fake news detection" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 44</a></div>
+                        <h3><a href="https://ojs.aaai.org/index.php/AAAI/article/view/31999" target="_blank" rel="noopener">Each Fake News Is Fake in Its Own Way: An Attribution Multi-Granularity Benchmark</a></h3>
+                        <p class="authors">Hao Guo*, <strong>Zihan Ma*</strong>, Zhi Zeng, Minnan Luo, Weixin Zeng, Jiuyang Tang, Xiang Zhao</p>
+                        <p class="tldr"><span>TL;DR</span> AMG moves beyond binary labels by identifying how multimodal news is fake, enabling fine-grained detection and attribution with aligned clues.</p>
+                        <div class="pub-links"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/31999" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/mazihan880/AMG-An-Attributing-Multi-modal-Fake-News-Dataset" target="_blank" rel="noopener">Code ↗</a><span class="live-stat" data-github-repo="mazihan880/AMG-An-Attributing-Multi-modal-Fake-News-Dataset">GitHub stars · …</span></div>
+                    </div>
+                    <span class="pub-number">06</span>
+                </article>
+
+                <article class="pub-card reveal" data-topic="misinformation">
+                    <a class="pub-visual" href="https://aclanthology.org/2024.acl-long.316/" target="_blank" rel="noopener" aria-label="Read Event-Radar">
+                        <img src="assets/publications/event-radar.png" alt="Event-Radar multi-view modeling, credibility fusion, and classification pipeline" loading="lazy">
+                        <span class="visual-label">Pipeline / Event-Radar</span>
+                    </a>
+                    <div class="pub-copy">
+                        <div class="pub-meta"><span>ACL · 2024</span><span class="ccf-mark ccf-a">CCF-A</span><span>First author</span><a class="citation-pill" data-citation data-scholar-title="Event-Radar: Event-driven Multi-View Learning for Multimodal Fake News Detection" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 85</a></div>
+                        <h3><a href="https://aclanthology.org/2024.acl-long.316/" target="_blank" rel="noopener">Event-Radar: Event-driven Multi-View Learning for Multimodal Fake News Detection</a></h3>
+                        <p class="authors"><strong>Zihan Ma</strong>, Minnan Luo, Hao Guo, Zhi Zeng, Yiran Hao, Xiang Zhao</p>
+                        <p class="tldr"><span>TL;DR</span> Event-level graphs fuse consistency, emotion, manipulation, and view credibility to detect fake news robustly in noisy social-media data.</p>
+                        <div class="pub-links"><a href="https://aclanthology.org/2024.acl-long.316/" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/mazihan880/Event-Radar" target="_blank" rel="noopener">Code ↗</a><span class="live-stat" data-github-repo="mazihan880/Event-Radar">GitHub stars · …</span></div>
+                    </div>
+                    <span class="pub-number">07</span>
+                </article>
+
+                <article class="pub-card reveal" data-topic="misinformation">
+                    <a class="pub-visual" href="https://ieeexplore.ieee.org/document/10687912" target="_blank" rel="noopener" aria-label="Read Learning Multimodal Attention Mixed with Frequency Domain Information">
+                        <img src="assets/publications/mhffd.png" alt="MHFFD fine-grained modal alignment, frequency encoding, and fake news detection pipeline" loading="lazy">
+                        <span class="visual-label">Pipeline / MHFFD</span>
+                    </a>
+                    <div class="pub-copy">
+                        <div class="pub-meta"><span>ICME · 2024</span><span class="ccf-mark ccf-b">CCF-B</span><span>First author</span><a class="citation-pill" data-citation data-scholar-title="Learning multimodal attention mixed with frequency domain information as detector for fake news detection" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 10</a></div>
+                        <h3><a href="https://ieeexplore.ieee.org/document/10687912" target="_blank" rel="noopener">Learning Multimodal Attention Mixed with Frequency Domain Information as Detector for Fake News Detection</a></h3>
+                        <p class="authors"><strong>Zihan Ma</strong>, Huan Liu, Zhi Zeng, Hao Guo, Xiang Zhao, Minnan Luo</p>
+                        <p class="tldr"><span>TL;DR</span> Token-level image-text alignment guides high-frequency manipulation cues, exposing deceptive news that remains semantically consistent.</p>
+                        <div class="pub-links"><a href="https://ieeexplore.ieee.org/document/10687912" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/mazihan880/MHFFD" target="_blank" rel="noopener">Code ↗</a></div>
+                    </div>
+                    <span class="pub-number">08</span>
+                </article>
+            </div>
+            <p class="publication-note">* Equal contribution. Featured cards above highlight first- and co-first-author work; the complete collaborative record follows.</p>
+
+            <div class="collaborative-research reveal" id="collaborative-work">
+                <div class="collaborative-heading">
+                    <div>
+                        <p class="eyebrow">Extended publication record</p>
+                        <h3>Collaborative work.</h3>
+                    </div>
+                    <p>Team science across foundation-model evaluation, multimodal reasoning, social networks, and trustworthy information systems. Citation counts update from Google Scholar.</p>
+                </div>
+
+                <div class="collab-list">
+                    <article class="collab-paper">
+                        <div class="collab-meta"><span>2022 · NeurIPS</span><span class="ccf-mark ccf-a">CCF-A</span><a class="citation-pill" data-citation data-scholar-title="Twibot-22: Towards graph-based twitter bot detection" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 253</a></div>
+                        <h4><a href="https://arxiv.org/abs/2206.04564" target="_blank" rel="noopener">TwiBot-22: Towards Graph-Based Twitter Bot Detection</a></h4>
+                        <p><strong>Zihan Ma</strong> as a contributor in the TwiBot-22 team</p>
+                    </article>
+                    <article class="collab-paper">
+                        <div class="collab-meta"><span>2025 · Preprint</span><span class="ccf-mark preprint">Preprint</span><a class="citation-pill" data-citation data-scholar-title="Intern-S1: A scientific multimodal foundation model" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 90</a></div>
+                        <h4><a href="https://arxiv.org/abs/2508.15763" target="_blank" rel="noopener">Intern-S1: A Scientific Multimodal Foundation Model</a></h4>
+                        <p><strong>Zihan Ma</strong> as a contributor in the Intern-S1 team</p>
+                    </article>
+                    <article class="collab-paper">
+                        <div class="collab-meta"><span>2024 · ACM MM</span><span class="ccf-mark ccf-a">CCF-A</span><a class="citation-pill" data-citation data-scholar-title="Mitigating world biases: A multimodal multi-view debiasing framework for fake news video detection" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 40</a></div>
+                        <h4>Mitigating World Biases: A Multimodal Multi-View Debiasing Framework for Fake News Video Detection</h4>
+                        <p>Zhi Zeng, Minnan Luo, Xiangzheng Kong, Huan Liu, Hao Guo, Hao Yang, <strong>Zihan Ma</strong>, Xiang Zhao</p>
+                    </article>
+                    <article class="collab-paper">
+                        <div class="collab-meta"><span>2025 · ACL</span><span class="ccf-mark ccf-a">CCF-A</span><a class="citation-pill" data-citation data-scholar-title="IMOL: Incomplete-Modality-Tolerant Learning for Multi-Domain Fake News Video Detection" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 16</a></div>
+                        <h4>IMOL: Incomplete-Modality-Tolerant Learning for Multi-Domain Fake News Video Detection</h4>
+                        <p>Zhi Zeng, Jiaying Wu, Minnan Luo, Herun Wan, Xiangzheng Kong, <strong>Zihan Ma</strong>, Guang Dai, Qinghua Zheng</p>
+                    </article>
+                    <article class="collab-paper">
+                        <div class="collab-meta"><span>2025 · EMNLP</span><span class="ccf-mark ccf-b">CCF-B</span><a class="citation-pill" data-citation data-scholar-title="How Do Social Bots Participate in Misinformation Spread? A Comprehensive Dataset and Analysis" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 13</a></div>
+                        <h4>How Do Social Bots Participate in Misinformation Spread? A Comprehensive Dataset and Analysis</h4>
+                        <p>Herun Wan, Minnan Luo, <strong>Zihan Ma</strong>, Guang Dai, Xiang Zhao</p>
+                    </article>
+                    <article class="collab-paper">
+                        <div class="collab-meta"><span>2025 · KDD</span><span class="ccf-mark ccf-a">CCF-A</span><a class="citation-pill" data-citation data-scholar-title="SAGE: Scale-Aware Gradual Evolution for Continual Knowledge Graph Embedding" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 13</a></div>
+                        <h4><a href="https://arxiv.org/abs/2508.11347" target="_blank" rel="noopener">SAGE: Scale-Aware Gradual Evolution for Continual Knowledge Graph Embedding</a></h4>
+                        <p>Yifei Li, Lingling Zhang, Hang Yan, Tianzhe Zhao, <strong>Zihan Ma</strong>, Muye Huang, Jun Liu</p>
+                    </article>
+                    <article class="collab-paper">
+                        <div class="collab-meta"><span>2025 · ACM MM</span><span class="ccf-mark ccf-a">CCF-A</span><a class="citation-pill" data-citation data-scholar-title="Understand, Refine and Summarize: Multi-View Knowledge Progressive Enhancement Learning for Fake News Video Detection" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 12</a></div>
+                        <h4><a href="https://dl.acm.org/doi/10.1145/3746027.3754551" target="_blank" rel="noopener">Understand, Refine and Summarize: Multi-View Knowledge Progressive Enhancement Learning for Fake News Video Detection</a></h4>
+                        <p>Zhi Zeng, Jiaying Wu, Minnan Luo, Xiangzheng Kong, <strong>Zihan Ma</strong>, Guang Dai, Qinghua Zheng</p>
+                    </article>
+                    <article class="collab-paper">
+                        <div class="collab-meta"><span>2025 · Preprint</span><span class="ccf-mark preprint">Preprint</span><a class="citation-pill" data-citation data-scholar-title="ATLAS: A High-Difficulty, Multidisciplinary Benchmark for Frontier Scientific Reasoning" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 7</a></div>
+                        <h4><a href="https://arxiv.org/abs/2511.14366" target="_blank" rel="noopener">ATLAS: A High-Difficulty, Multidisciplinary Benchmark for Frontier Scientific Reasoning</a></h4>
+                        <p><strong>Zihan Ma</strong> as a project contributor in the ATLAS team</p>
+                    </article>
+                    <article class="collab-paper">
+                        <div class="collab-meta"><span>2025 · ICME</span><span class="ccf-mark ccf-b">CCF-B</span><a class="citation-pill" data-citation data-scholar-title="Harmony in Chaos: A Progressive Noise-Resilient Network for Robust Fake News Video Detection" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 5</a></div>
+                        <h4>Harmony in Chaos: A Progressive Noise-Resilient Network for Robust Fake News Video Detection</h4>
+                        <p>Xiangzheng Kong, Zhi Zeng, Chenguang Zhu, <strong>Zihan Ma</strong>, Minnan Luo</p>
+                    </article>
+                    <article class="collab-paper">
+                        <div class="collab-meta"><span>2026 · The Web Conference</span><span class="ccf-mark ccf-a">CCF-A</span><a class="citation-pill" data-citation data-scholar-title="From manipulation to mistrust: Explaining diverse micro-video misinformation for robust debunking in the wild" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 3</a></div>
+                        <h4>From Manipulation to Mistrust: Explaining Diverse Micro-Video Misinformation for Robust Debunking in the Wild</h4>
+                        <p>Zhi Zeng, Yiming Yang, Jiaying Wu, Xinyu Zhang, Xiangzheng Kong, Herun Wan, <strong>Zihan Ma</strong>, Minnan Luo</p>
+                    </article>
+                    <article class="collab-paper">
+                        <div class="collab-meta"><span>2025 · Preprint</span><span class="ccf-mark preprint">Preprint</span><a class="citation-pill" data-citation data-scholar-title="Deciphering Trajectory-Aided LLM Reasoning: An Optimization Perspective" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 3</a></div>
+                        <h4><a href="https://arxiv.org/abs/2505.19815" target="_blank" rel="noopener">Deciphering Trajectory-Aided LLM Reasoning: An Optimization Perspective</a></h4>
+                        <p>Junnan Liu, Hongwei Liu, Linchen Xiao, Shudong Liu, Taolin Zhang, <strong>Zihan Ma</strong>, Songyang Zhang, Kai Chen</p>
+                    </article>
+                    <article class="collab-paper">
+                        <div class="collab-meta"><span>2025 · Preprint</span><span class="ccf-mark preprint">Preprint</span><a class="citation-pill" data-citation data-scholar-title="DiFaR: Enhancing Multimodal Misinformation Detection with Diverse, Factual, and Relevant Rationales" href="https://scholar.google.com/citations?user=xKOhjOkAAAAJ" target="_blank" rel="noopener">Cited by 2</a></div>
+                        <h4><a href="https://arxiv.org/abs/2508.10444" target="_blank" rel="noopener">DiFaR: Enhancing Multimodal Misinformation Detection with Diverse, Factual, and Relevant Rationales</a></h4>
+                        <p>Herun Wan, Jiaying Wu, Minnan Luo, Xiangzheng Kong, <strong>Zihan Ma</strong>, Zhi Zeng</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <h2 class="section-title">💼 Experience</h2>
-            <div class="experience-content">
-                <div class="experience-item">
-                    <div class="experience-period">Dec 2024 - Oct 2025</div>
-                    <div class="experience-details">
-                        <strong>Research Intern</strong> @ Shanghai AI Laboratory
-                        <p>Team: LLM Center; Project: OpenCompass (6.0k+ GitHub Stars). Working on large language model evaluation and benchmarking systems. Mentor: <a href="https://www.zhangsongyang.com/" target="_blank">Songyang Zhang</a></p>
+        <section class="journey section-shell" id="journey">
+            <div class="journey-intro reveal">
+                <div class="section-kicker"><span>05</span><p>Journey</p></div>
+                <h2>Education and research experience.</h2>
+                <p>I started in electrical engineering and later moved into multimodal learning, large-model evaluation, and agent safety through graduate study, internships, and international collaboration.</p>
+            </div>
+
+            <div class="timeline" aria-label="Academic and research timeline">
+                <article class="timeline-item reveal">
+                    <div class="timeline-period"><span>2025.11</span><span>Present</span></div>
+                    <div class="timeline-marker"><span></span></div>
+                    <div class="timeline-card">
+                        <img class="timeline-logo timeline-logo-ntu" src="assets/logos/ntu.png" alt="Nanyang Technological University logo" loading="lazy">
+                        <p class="timeline-type">International research</p>
+                        <h3>Visiting PhD Student</h3>
+                        <h4>Nanyang Technological University · Singapore</h4>
+                        <p>Researching natural language processing and AI safety with Asst. Prof. Wenya Wang, alongside collaboration with I²R, A*STAR.</p>
                     </div>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-period">Nov 2025 - Present</div>
-                    <div class="experience-details">
-                        <strong>Visiting Ph.D. Student</strong> @ Nanyang Technological University (NTU), Singapore
-                        <p>Visiting PhD student in Natural Language Processing and AI Safety. Supervisor: <a href="https://personal.ntu.edu.sg/wangwy/" target="_blank">Assistant Prof. Wenya Wang</a></p>
+                </article>
+
+                <article class="timeline-item reveal">
+                    <div class="timeline-period"><span>2024.12</span><span>2025.10</span></div>
+                    <div class="timeline-marker"><span></span></div>
+                    <div class="timeline-card">
+                        <img class="timeline-logo timeline-logo-shlab" src="assets/logos/shanghai-ai-lab.png" alt="Shanghai Artificial Intelligence Laboratory logo" loading="lazy">
+                        <p class="timeline-type">Industry research</p>
+                        <h3>Research Intern · OpenCompass</h3>
+                        <h4>Shanghai Artificial Intelligence Laboratory</h4>
+                        <p>Worked on large-model evaluation and reliable code benchmarking with <a href="https://www.zhangsongyang.com/" target="_blank" rel="noopener">Songyang Zhang</a> and the OpenCompass team.</p>
                     </div>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-period">Nov 2025 - Present</div>
-                    <div class="experience-details">
-                        <strong>Research Collaboration</strong> @ I2R, A*STAR, Singapore
-                        <p>Collaborating with <a href="https://sites.google.com/site/linzhuoyi1995/PhD?authuser=0" target="_blank">Zhuoyi Lin</a> on related research topics.</p>
+                </article>
+
+                <article class="timeline-item reveal">
+                    <div class="timeline-period"><span>2024</span><span>2027</span></div>
+                    <div class="timeline-marker"><span></span></div>
+                    <div class="timeline-card">
+                        <img class="timeline-logo" src="assets/logos/xjtu.png" alt="Xi’an Jiaotong University logo" loading="lazy">
+                        <p class="timeline-type">Doctoral study</p>
+                        <h3>PhD in Computer Science &amp; Technology</h3>
+                        <h4>Xi’an Jiaotong University</h4>
+                        <p>Advised by Prof. Minnan Luo, focusing on trustworthy multimodal intelligence, LLM evaluation, and agent safety.</p>
                     </div>
-                </div>
+                </article>
+
+                <article class="timeline-item reveal">
+                    <div class="timeline-period"><span>2022</span><span>2024</span></div>
+                    <div class="timeline-marker"><span></span></div>
+                    <div class="timeline-card">
+                        <img class="timeline-logo" src="assets/logos/xjtu.png" alt="Xi’an Jiaotong University logo" loading="lazy">
+                        <p class="timeline-type">Graduate study</p>
+                        <h3>Master–PhD Program · Direct Entry</h3>
+                        <h4>Xi’an Jiaotong University</h4>
+                        <p>Began research in multimodal misinformation analysis and trustworthy social-media intelligence.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-item reveal">
+                    <div class="timeline-period"><span>2018</span><span>2022</span></div>
+                    <div class="timeline-marker"><span></span></div>
+                    <div class="timeline-card">
+                        <img class="timeline-logo" src="assets/logos/xjtu.png" alt="Xi’an Jiaotong University logo" loading="lazy">
+                        <p class="timeline-type">Undergraduate study</p>
+                        <h3>BEng in Electrical Engineering &amp; Automation</h3>
+                        <h4>Xi’an Jiaotong University</h4>
+                        <p>Built the engineering foundation that continues to shape my approach to dependable AI systems.</p>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- Academic Services Section -->
-        <section id="services" class="section">
-            <h2 class="section-title">🔬 Academic Services</h2>
-            <div class="experience-content">
-                <div class="experience-item">
-                    <div class="experience-details">
-                        <strong>Reviewer</strong>
-                        <p>NeurIPS, ICLR, AAAI, ARR, IEEE TIFS, ACM MM, IEEE ICME</p>
-                    </div>
+        <section class="recognition section-shell" id="recognition">
+            <div class="section-heading reveal">
+                <div>
+                    <div class="section-kicker"><span>06</span><p>Recognition</p></div>
+                    <h2>Recognition &amp; academic service.</h2>
                 </div>
+            </div>
+
+            <div class="recognition-grid">
+                <article class="recognition-feature reveal">
+                    <span class="recognition-year">2025</span>
+                    <p class="recognition-label">Selected honor</p>
+                    <h3>China Association for Science and Technology Young Talent Cultivation Program</h3>
+                    <p>Doctoral Student Special Plan · 中国科协青年科技人才培育工程博士生专项计划</p>
+                </article>
+                <article class="recognition-card reveal">
+                    <span>Reviewer award</span>
+                    <h3>Outstanding Reviewer</h3>
+                    <p>ACM Multimedia 2025</p>
+                </article>
+                <article class="recognition-card reveal">
+                    <span>Scholarship</span>
+                    <h3>CSC Visiting PhD Program</h3>
+                    <p>Nanyang Technological University</p>
+                </article>
+                <article class="recognition-card reveal">
+                    <span>Academic service</span>
+                    <h3>Reviewer</h3>
+                    <p>NeurIPS · ICLR · AAAI · ARR · IEEE TIFS · ACM MM · IEEE ICME</p>
+                </article>
+                <article class="recognition-card reveal">
+                    <span>Scholarships</span>
+                    <h3>Selected support</h3>
+                    <p>XJTU Graduate Special Scholarship · Siyuan Electric Scholarship</p>
+                </article>
             </div>
         </section>
 
-        <!-- Awards & Scholarships Section -->
-        <section id="awards" class="section">
-            <h2 class="section-title">🏆 Awards & Scholarships</h2>
-            <div class="experience-content">
-                <div class="experience-item">
-                    <div class="experience-details">
-                        <strong>Academic Awards & Recognition</strong>
-                        <ul class="awards-list">
-                            <li>Outstanding Reviewer Award, ACM MM 2025</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-details">
-                        <strong>Scholarships & Honors</strong>
-                        <ul class="awards-list">
-                            <li>2025 China Association for Science and Technology Youth Science and Technology Talent Cultivation Project Doctoral Student Special Plan (2025年中国科协青年科技人才培育工程博士生专项计划)</li>
-                            <li>Xi'an Jiaotong University Graduate Special Scholarship</li>
-                            <li>Xi'an Jiaotong University Second-Class Scholarship</li>
-                            <li>Siyuan Electric Scholarship</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-details">
-                        <strong>CSC Visiting Ph.D. Program</strong>
-                        <p>Awarded China Scholarship Council (CSC) funding for visiting PhD program at Nanyang Technological University, Singapore</p>
-                    </div>
-                </div>
+        <section class="contact section-shell reveal" id="contact">
+            <div class="contact-copy">
+                <p class="eyebrow">Contact</p>
+                <h2>Open to research collaborations and 2027 opportunities.</h2>
+                <p>Currently based between Singapore and Xi’an, with Xi’an as the preferred long-term base.</p>
             </div>
+            <a class="contact-link" href="mailto:mazihan880@stu.xjtu.edu.cn" data-copy-email="mazihan880@stu.xjtu.edu.cn" aria-label="Copy email address">
+                <span data-copy-feedback data-default-text="Copy email" data-copied-text="Copied ✓" aria-live="polite">Copy email</span>
+                <strong>mazihan880@stu.xjtu.edu.cn</strong>
+                <span aria-hidden="true">↗</span>
+            </a>
         </section>
+    </main>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>&copy; 2025 Zihan Ma. All rights reserved.</p>
-        </footer>
-    </div>
+    <footer class="site-footer">
+        <div>
+            <strong>Zihan Ma</strong>
+            <p>Trustworthy AI · Xi’an / Singapore</p>
+        </div>
+        <p>© <span id="current-year">2026</span> · Designed with care, built for clarity.</p>
+        <a href="#home">Back to top ↑</a>
+    </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

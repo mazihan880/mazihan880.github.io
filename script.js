@@ -1,571 +1,200 @@
-// Publications data
-const firstAuthorPapers = [
-        {
-            title: "Graphing the Truth: Harnessing Causal Insights for Advanced Multimodal Fake News Detection",
-            authors: "Zihan Ma, Minnan Luo, Zhi Zeng, Herun Wan, Yifei Li, Xiang Zhao",
-            venue: "IEEE Transactions on Information Forensics and Security‌",
-            year: "2025",
-            ccf: "CCF-A",
-            links: {
-                paper: "https://ieeexplore.ieee.org/document/11269908",
-                code: "https://github.com/mazihan880/DICE_Code"
-            }
-        },
-        {
-            title: "How Brittle is Agent Safety? Rethinking Agent Risk under Intent Concealment and Task Complexity",
-            authors: "Zihan Ma=, Dongsheng Zhu=, Shudong Liu, Taolin Zhang, Junnan Liu, Qingqiu Li, Minnan Luo, Songyang Zhang, Kai Chen",
-            venue: "arXiv preprint",
-            year: "2025",
-            ccf: "preprint",
-            links: {
-                paper: "https://arxiv.org/abs/2511.08487",
-                code: "https://github.com/open-compass/OASIS"
-            }
-        },
-        {
-            title: "Rethinking Verification for LLM Code Generation: From Generation to Testing",
-            authors: "Zihan Ma=, Taolin Zhang=, Maosong Cao, Junnan Liu, Wenwei Zhang, Minnan Luo, Songyang Zhang, Kai Chen",
-            venue: "NeurIPS 2025",
-            year: "2025",
-            ccf: "CCF-A",
-            links: {
-                paper: "https://arxiv.org/abs/2507.06920",
-                code: "https://github.com/open-compass/SAGA"
-            },
-            repo: "open-compass/SAGA",
-            hf_datasets: ["opencompass/CodeForce_SAGA", "opencompass/CodeCompass"]
-        },
-        {
-            title: "Bridging Interests and Truth: Towards Mitigating Fake News with Personalized and Truthful Recommendations",
-            authors: "Zihan Ma, Minnan Luo, Yiran Hao, Zhi Zeng, Xiangzheng Kong, Jiahao Wang",
-            venue: "SIGIR 2025",
-            year: "2025",
-            ccf: "CCF-A",
-            links: {
-                paper: "https://dl.acm.org/doi/abs/10.1145/3726302.3729912",
-                code: "#"
-            }
-        },
-        {
-            title: "Coding Triangle: How Does Large Language Model Understand Code?",
-            authors: "Taolin Zhang=, Zihan Ma=, Maosong Cao, Junnan Liu, Songyang Zhang, Kai Chen",
-            venue: "arXiv preprint",
-            year: "2025",
-            ccf: "preprint",
-            links: {
-                paper: "https://arxiv.org/abs/2507.06138",
-                code: "#"
-            }
-        },
-        {
-            title: "Each fake news is fake in its own way: An attribution multi-granularity benchmark for multimodal fake news detection",
-            authors: "Hao Guo=, Zihan Ma=, Zhi Zeng, Minnan Luo, Weixin Zeng, Jiuyang Tang, Xiang Zhao",
-            venue: "AAAI 2025",
-            year: "2025",
-            ccf: "CCF-A",
-            links: {
-                paper: "https://arxiv.org/abs/2412.14686",
-                code: "https://github.com/mazihan880/AMG-An-Attributing-Multi-modal-Fake-News-Dataset"
-            },
-            repo: "mazihan880/AMG-An-Attributing-Multi-modal-Fake-News-Dataset"
-        },
-        {
-            title: "Event-Radar: Event-driven Multi-View Learning for Multimodal Fake News Detection",
-            authors: "Zihan Ma, Minnan Luo, Hao Guo, Zhi Zeng, Yiran Hao, Xiang Zhao",
-            venue: "ACL 2024",
-            year: "2024",
-            ccf: "CCF-A",
-            links: {
-                paper: "https://aclanthology.org/2024.acl-long.316/",
-                code: "https://github.com/mazihan880/Event-Radar"
-            },
-            repo: "mazihan880/Event-Radar"
-        },
-        {
-            title: "Learning multimodal attention mixed with frequency domain information as detector for fake news detection",
-            authors: "Zihan Ma, Huan Liu, Zhi Zeng, Hao Guo, Xiang Zhao, Minnan Luo",
-            venue: "ICME 2024",
-            year: "2025",
-            ccf: "CCF-B",
-            links: {
-                paper: "https://ieeexplore.ieee.org/abstract/document/10687912/",
-                code: "https://github.com/mazihan880/MHFFD"
-            }
-        },
-        
-    ];
+document.documentElement.classList.add('enhanced');
 
-const collaborativePapers = [
-        {
-            title: "Intern-S1: A scientific multimodal foundation model",
-            authors: "Zihan Ma as a contributor in Intern-S1 Team",
-            venue: "arXiv preprint",
-            year: "2025",
-            ccf: "preprint",
-            links: {
-                paper: "https://arxiv.org/abs/2508.15763",
-                code: "#"
-            }
-        },
-        {
-            title: "ATLAS: A High-Difficulty, Multidisciplinary Benchmark for Frontier Scientific Reasoning",
-            authors: "Zihan Ma as a Project Contributor in the Team",
-            venue: "arXiv preprint",
-            year: "2025",
-            ccf: "preprint",
-            links: {
-                paper: "https://arxiv.org/pdf/2511.14366",
-                code: "#"
-            }
-        },
-        {
-            title: "Understand, Refine and Summarize: Multi-View Knowledge Progressive Enhancement Learning for Fake News Video Detection",
-            authors: "Zhi Zeng, Jiaying Wu, Minnan Luo, Xiangzheng Kong, Zihan Ma, Guang Dai, Qinghua Zheng",
-            venue: "ACM MM 2025",
-            year: "2025",
-            ccf: "CCF-A",
-            links: {
-                paper: "https://dl.acm.org/doi/abs/10.1145/3746027.3754551",
-                code: "#"
-            }
-        },
-        {
-            title: "How Do Social Bots Participate in Misinformation Spread? A Comprehensive Dataset and Analysis",
-            authors: "Herun Wan, Minnan Luo, Zihan Ma, Guang Dai, Xiang Zhao",
-            venue: "EMNLP2025",
-            year: "2025",
-            ccf: "CCF-B",
-            links: {
-                paper: "#",
-                code: "#"
-            }
-        },
-        {
-            title: "DiFaR: Enhancing Multimodal Misinformation Detection with Diverse, Factual, and Relevant Rationales",
-            authors: "Herun Wan, Jiaying Wu, Minnan Luo, Xiangzheng Kong, Zihan Ma, Zhi Zeng",
-            venue: "arXiv preprint",
-            year: "2025",
-            ccf: "preprint",
-            links: {
-                paper: "https://arxiv.org/abs/2507.06920",
-                code: "#"
-            }
-        },
-        {
-            title: "Deciphering Trajectory-Aided LLM Reasoning: An Optimization Perspective",
-            authors: "Junnan Liu, Hongwei Liu, Linchen Xiao, Shudong Liu, Taolin Zhang, Zihan Ma, Songyang Zhang, Kai Chen",
-            venue: "arXiv preprint",
-            year: "2025",
-            ccf: "preprint",
-            links: {
-                paper: "#",
-                code: "#"
-            }
-        },
-        {
-            title: "SAGE: Scale-Aware Gradual Evolution for Continual Knowledge Graph Embedding",
-            authors: "Yifei Li, Lingling Zhang, Hang Yan, Tianzhe Zhao, Zihan Ma, Muye Huang, Jun Liu",
-            venue: "KDD 2025",
-            year: "2025",
-            ccf: "CCF-A",
-            links: {
-                paper: "https://arxiv.org/abs/2508.11347",
-                code: "#"
-            }
-        },
-        {
-            title: "IMOL: Incomplete-Modality-Tolerant Learning for Multi-Domain Fake News Video Detection",
-            authors: "Zhi Zeng, Jiaying Wu, Minnan Luo, Herun Wan, Xiangzheng Kong, Zihan Ma, Guang Dai, Qinghua Zheng",
-            venue: "ACL 2025",
-            year: "2025",
-            ccf: "CCF-A",
-            links: {
-                paper: "#",
-                code: "#"
-            }
-        },
-        {
-            title: "Mitigating world biases: A multimodal multi-view debiasing framework for fake news video detection",
-            authors: "Zhi Zeng, Minnan Luo, Xiangzheng Kong, Huan Liu, Hao Guo, Hao Yang, Zihan Ma, Xiang Zhao",
-            venue: "ACM MM 2024",
-            year: "2024",
-            ccf: "CCF-A",
-            links: {
-                paper: "#",
-                code: "#"
-            }
-        },
-        {
-            title: "Twibot-22: Towards graph-based twitter bot detection",
-            authors: "Zihan Ma as a contributor in Twibot-22 Team",
-            venue: "NeurIPS 2022",
-            year: "2022",
-            ccf: "CCF-A",
-            links: {
-                paper: "https://arxiv.org/abs/2206.04564",
-                code: "#"
-            }
+const body = document.body;
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = [...document.querySelectorAll('.nav-links a')];
+const filterButtons = [...document.querySelectorAll('[data-filter]')];
+const publications = [...document.querySelectorAll('.pub-card')];
+const progressBar = document.querySelector('.scroll-progress span');
+const emailLinks = [...document.querySelectorAll('[data-copy-email]')];
+
+async function copyToClipboard(value) {
+    if (navigator.clipboard && window.isSecureContext) {
+        try {
+            await navigator.clipboard.writeText(value);
+            return;
+        } catch (error) {
+            // Fall through to the selection-based copy method.
         }
-    ];
-
-// Function to create publication HTML
-function createPublicationHTML(pub, isFirstAuthor = false) {
-    // For co-author papers, don't show any links
-    // For first author papers, only show links that are not "#"
-    let linksHTML = '';
-    if (isFirstAuthor) {
-        linksHTML = Object.entries(pub.links)
-            .filter(([key, url]) => url !== '#')  // Filter out placeholder links
-            .map(([key, url]) => 
-                `<a href="${url}" class="publication-link" target="_blank">${key.charAt(0).toUpperCase() + key.slice(1)}</a>`
-            ).join('');
     }
 
-    // Check author position to determine badge text
-    let badgeText = '';
-    let showBadge = false;
-    
-    if (isFirstAuthor) {
-        // For first author papers, check Zihan Ma's position
-        if (pub.authors.includes('Zihan Ma=')) {
-            // Check if Zihan Ma= is the first author or co-first
-            const authorsList = pub.authors.split(',').map(author => author.trim());
-            const zihanPosition = authorsList.findIndex(author => author.includes('Zihan Ma='));
-            badgeText = zihanPosition === 0 ? 'First Author' : 'Co-First Author';
-        } else {
-            // If no Zihan Ma= found, default to First Author
-            badgeText = 'First Author';
-        }
-        showBadge = true;
-    } else {
-        // For co-authored papers, always show Co-Author badge
-        badgeText = 'Co-Author';
-        showBadge = true;
-    }
-    
-    const badgeHTML = showBadge ? `<div class="first-author-badge">${badgeText}</div>` : '';
-    
-    // CCF rating badge
-    let ccfClass = '';
-    if (pub.ccf) {
-        if (pub.ccf.includes('CCF-A')) ccfClass = 'ccfa';
-        else if (pub.ccf.includes('CCF-B')) ccfClass = 'ccfb';
-        else if (pub.ccf.toLowerCase().includes('preprint')) ccfClass = 'preprint';
-        else ccfClass = 'other';
-    }
-    const ccfBadgeHTML = pub.ccf ? `<div class="ccf-badge ${ccfClass}">${pub.ccf}</div>` : '';
-
-    const badgesContainerHTML = (badgeHTML || ccfBadgeHTML) ? 
-        `<div class="badges-container">${badgeHTML}${ccfBadgeHTML}</div>` : '';
-
-    let statsHTML = '';
-    const hfDatasetsForStats = Array.isArray(pub.hf_datasets)
-        ? pub.hf_datasets
-        : (pub.hf_dataset ? [pub.hf_dataset] : []);
-
-    if (pub.repo || hfDatasetsForStats.length > 0) {
-        statsHTML = '<div class="publication-stats" style="margin-top: 8px; display: flex; gap: 15px; font-size: 0.9em; color: #666;">';
-        
-        if (pub.repo) {
-            const repoId = pub.repo.replace(/\//g, '-');
-            statsHTML += `<span id="stars-${repoId}" class="stat-badge"><i class="fab fa-github"></i> Stars: ...</span>`;
-        }
-        
-        if (hfDatasetsForStats.length > 0) {
-            const hfId = hfDatasetsForStats
-                .join('__')
-                .replace(/\//g, '-')
-                .replace(/[^a-zA-Z0-9_-]/g, '-');
-            statsHTML += `<span id="downloads-${hfId}" class="stat-badge"><i class="fas fa-download"></i> HF Downloads: ...</span>`;
-        }
-        
-        statsHTML += '</div>';
-    }
-
-    return `
-        <div class="publication-item ${isFirstAuthor ? 'first-author' : ''}">
-            ${badgesContainerHTML}
-            <div class="publication-title">${pub.title}</div>
-            <div class="publication-authors">${pub.authors}</div>
-            <div class="publication-venue">${pub.venue}</div>
-            <div class="publication-links">${linksHTML}</div>
-            ${statsHTML}
-        </div>
-    `;
+    const input = document.createElement('textarea');
+    input.value = value;
+    input.setAttribute('readonly', '');
+    input.style.position = 'fixed';
+    input.style.opacity = '0';
+    document.body.appendChild(input);
+    input.select();
+    input.setSelectionRange(0, input.value.length);
+    const copied = document.execCommand('copy');
+    input.remove();
+    if (!copied) throw new Error('Clipboard copy failed');
 }
 
-async function fetchGitHubStars(repo) {
-    const url = `https://img.shields.io/github/stars/${repo}.json`;
-    const delaysMs = [0, 400, 1000, 2000];
-
-    for (const delayMs of delaysMs) {
-        if (delayMs > 0) {
-            await new Promise(resolve => setTimeout(resolve, delayMs));
-        }
+emailLinks.forEach((link) => {
+    let resetTimer;
+    link.addEventListener('click', async (event) => {
+        event.preventDefault();
+        const feedback = link.querySelector('[data-copy-feedback]');
 
         try {
-            const response = await fetch(url, { cache: 'no-store' });
-            if (!response.ok) continue;
+            await copyToClipboard(link.dataset.copyEmail);
+            window.clearTimeout(resetTimer);
+            link.classList.add('is-copied');
+            if (feedback) feedback.textContent = feedback.dataset.copiedText || 'Copied ✓';
 
-            const data = await response.json();
-            const raw = (data && (data.value ?? data.message)) ? String(data.value ?? data.message) : '';
-            const normalized = raw.trim().toLowerCase();
-
-            const match = normalized.match(/^(\d+(\.\d+)?)(k|m)?$/);
-            if (!match) return null;
-
-            const num = Number(match[1]);
-            const unit = match[3];
-            if (!Number.isFinite(num)) return null;
-
-            if (unit === 'k') return Math.round(num * 1000);
-            if (unit === 'm') return Math.round(num * 1000000);
-            return Math.round(num);
-        } catch (e) {
+            resetTimer = window.setTimeout(() => {
+                link.classList.remove('is-copied');
+                if (feedback) feedback.textContent = feedback.dataset.defaultText || '↗';
+            }, 2200);
+        } catch (error) {
+            window.location.href = link.href;
         }
-    }
+    });
+});
 
-    return null;
+menuToggle?.addEventListener('click', () => {
+    const open = body.classList.toggle('nav-open');
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+});
+
+navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        body.classList.remove('nav-open');
+        menuToggle?.setAttribute('aria-expanded', 'false');
+        menuToggle?.setAttribute('aria-label', 'Open navigation');
+    });
+});
+
+filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        filterButtons.forEach((item) => {
+            const active = item === button;
+            item.classList.toggle('is-active', active);
+            item.setAttribute('aria-pressed', String(active));
+        });
+
+        publications.forEach((publication) => {
+            const visible = filter === 'all' || publication.dataset.topic === filter;
+            publication.hidden = !visible;
+        });
+    });
+});
+
+const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+
+document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+
+const sections = [...document.querySelectorAll('main section[id], main header[id]')];
+const sectionObserver = new IntersectionObserver((entries) => {
+    const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+    if (!visible) return;
+    navLinks.forEach((link) => {
+        link.classList.toggle('is-active', link.getAttribute('href') === `#${visible.target.id}`);
+    });
+}, { rootMargin: '-28% 0px -58% 0px', threshold: [0, 0.1, 0.4] });
+
+sections.forEach((section) => sectionObserver.observe(section));
+
+function updateProgress() {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
+    progressBar.style.transform = `scaleX(${Math.min(1, Math.max(0, progress))})`;
+}
+
+window.addEventListener('scroll', updateProgress, { passive: true });
+window.addEventListener('resize', updateProgress);
+updateProgress();
+
+function normalizeTitle(title) {
+    return title
+        .normalize('NFKD')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, ' ')
+        .trim();
+}
+
+function formatCompact(value) {
+    return new Intl.NumberFormat('en', {
+        notation: value >= 1000 ? 'compact' : 'standard',
+        maximumFractionDigits: 1
+    }).format(value);
+}
+
+async function updateScholarCitations() {
+    try {
+        const response = await fetch('data/scholar.json', { cache: 'no-store' });
+        if (!response.ok) return;
+        const snapshot = await response.json();
+        const papers = new Map(
+            (snapshot.papers || []).map((paper) => [normalizeTitle(paper.title), paper])
+        );
+
+        document.querySelectorAll('[data-citation]').forEach((element) => {
+            const paper = papers.get(normalizeTitle(element.dataset.scholarTitle || ''));
+            if (!paper) return;
+            element.textContent = `Cited by ${paper.citations || 0}`;
+            if (paper.scholar_url) element.href = paper.scholar_url;
+        });
+
+    } catch (error) {
+        // The static fallback values remain visible when Scholar data is unavailable.
+    }
+}
+
+async function fetchGitHubStars(repository) {
+    const response = await fetch(`https://img.shields.io/github/stars/${repository}.json`, { cache: 'no-store' });
+    if (!response.ok) throw new Error('GitHub stats unavailable');
+    const data = await response.json();
+    const raw = String(data.value ?? data.message ?? '').trim().toLowerCase();
+    const match = raw.match(/^(\d+(?:\.\d+)?)(k|m)?$/);
+    if (!match) throw new Error('Unexpected GitHub stats format');
+    const multiplier = match[2] === 'm' ? 1_000_000 : match[2] === 'k' ? 1_000 : 1;
+    return Math.round(Number(match[1]) * multiplier);
 }
 
 async function fetchHuggingFaceDownloads(dataset) {
-    try {
-        const response = await fetch(`https://huggingface.co/api/datasets/${dataset}`);
-        if (!response.ok) return null;
-        const data = await response.json();
-        return data.downloads;
-    } catch (error) {
-        return null;
-    }
+    const response = await fetch(`https://huggingface.co/api/datasets/${dataset}`, { cache: 'no-store' });
+    if (!response.ok) throw new Error('Hugging Face stats unavailable');
+    const data = await response.json();
+    return Number(data.downloads || 0);
 }
 
-async function updateStats() {
-    const allPapers = [...firstAuthorPapers, ...collaborativePapers];
-    
-    let hasPending = false;
-    for (const pub of allPapers) {
-        if (pub.repo) {
-            try {
-                const stars = await fetchGitHubStars(pub.repo);
-                if (stars !== null) {
-                    const repoId = pub.repo.replace(/\//g, '-');
-                    const el = document.getElementById(`stars-${repoId}`);
-                    if (el) el.innerHTML = `<i class="fab fa-github"></i> Stars: ${stars}`;
-                } else {
-                    hasPending = true;
-                }
-            } catch (e) {
-                hasPending = true;
-            }
+async function updateLiveStats() {
+    document.querySelectorAll('[data-github-repo]').forEach(async (element) => {
+        try {
+            const stars = await fetchGitHubStars(element.dataset.githubRepo);
+            element.textContent = `GitHub stars · ${formatCompact(stars)}`;
+        } catch (error) {
+            element.textContent = 'GitHub stars · live';
         }
-        
-        if (pub.hf_dataset) {
-            try {
-                const downloads = await fetchHuggingFaceDownloads(pub.hf_dataset);
-                if (downloads !== null) {
-                     const hfId = pub.hf_dataset.replace(/\//g, '-');
-                     const el = document.getElementById(`downloads-${hfId}`);
-                     if (el) el.innerHTML = `<i class="fas fa-download"></i> HF Downloads: ${downloads}`;
-                } else {
-                    hasPending = true;
-                }
-            } catch (e) {
-                hasPending = true;
-            }
+    });
+
+    document.querySelectorAll('[data-hf-datasets]').forEach(async (element) => {
+        try {
+            const datasets = element.dataset.hfDatasets.split(',').map((item) => item.trim()).filter(Boolean);
+            const downloads = await Promise.all(datasets.map(fetchHuggingFaceDownloads));
+            const total = downloads.reduce((sum, count) => sum + count, 0);
+            element.textContent = `HF downloads · ${formatCompact(total)}`;
+        } catch (error) {
+            element.textContent = 'HF downloads · live';
         }
-
-        if (Array.isArray(pub.hf_datasets) && pub.hf_datasets.length > 0) {
-            try {
-                let total = 0;
-                let ok = true;
-
-                for (const dataset of pub.hf_datasets) {
-                    const downloads = await fetchHuggingFaceDownloads(dataset);
-                    if (downloads === null) {
-                        ok = false;
-                        break;
-                    }
-                    total += downloads;
-                }
-
-                if (ok) {
-                    const hfId = pub.hf_datasets
-                        .join('__')
-                        .replace(/\//g, '-')
-                        .replace(/[^a-zA-Z0-9_-]/g, '-');
-                    const el = document.getElementById(`downloads-${hfId}`);
-                    if (el) el.innerHTML = `<i class="fas fa-download"></i> HF Downloads: ${total}`;
-                } else {
-                    hasPending = true;
-                }
-            } catch (e) {
-                hasPending = true;
-            }
-        }
-    }
-
-    if (hasPending) {
-        setTimeout(updateStats, 8000);
-    }
-}
-
-// Function to populate publications
-function populatePublications() {
-    const firstAuthorContainer = document.getElementById('first-author-pubs');
-    const coAuthorContainer = document.getElementById('coauthor-pubs');
-
-    if (firstAuthorContainer) {
-        firstAuthorContainer.innerHTML = firstAuthorPapers
-            .map(pub => createPublicationHTML(pub, true))
-            .join('');
-    }
-
-    if (coAuthorContainer) {
-        coAuthorContainer.innerHTML = collaborativePapers
-            .map(pub => createPublicationHTML(pub, false))
-            .join('');
-    }
-    
-    updateStats();
-}
-
-// Function to update last updated date
-function updateLastUpdated() {
-    const lastUpdatedElement = document.getElementById('last-updated');
-    if (lastUpdatedElement) {
-        const now = new Date();
-        const options = { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-        };
-        lastUpdatedElement.textContent = now.toLocaleDateString('en-US', options);
-    }
-}
-
-// Function to handle profile image error
-function handleProfileImageError() {
-    const profileImg = document.getElementById('profile-img');
-    if (profileImg) {
-        profileImg.onerror = function() {
-            // Create a placeholder SVG if image fails to load
-            this.style.display = 'none';
-            const placeholder = document.createElement('div');
-            placeholder.style.cssText = `
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-                background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                font-size: 3rem;
-                font-weight: bold;
-                border: 4px solid white;
-                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            `;
-            placeholder.textContent = 'YN'; // You can change this to your initials
-            this.parentNode.appendChild(placeholder);
-        };
-    }
-}
-
-// Function to add smooth scrolling to anchor links
-function addSmoothScrolling() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
     });
 }
 
-// Function to add intersection observer for animations
-function addScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+updateScholarCitations();
+updateLiveStats();
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Observe all sections
-    document.querySelectorAll('.section').forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
-    });
-}
-
-// Function to add copy email functionality
-function addCopyEmailFeature() {
-    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
-    emailLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const email = this.href.replace('mailto:', '');
-            navigator.clipboard.writeText(email).then(() => {
-                // Show a temporary tooltip
-                const tooltip = document.createElement('div');
-                tooltip.textContent = 'Email copied!';
-                tooltip.style.cssText = `
-                    position: absolute;
-                    background: #2c3e50;
-                    color: white;
-                    padding: 6px 12px;
-                    border-radius: 6px;
-                    font-size: 0.85rem;
-                    z-index: 1000;
-                    pointer-events: none;
-                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-                `;
-                document.body.appendChild(tooltip);
-                
-                const rect = this.getBoundingClientRect();
-                tooltip.style.left = rect.left + 'px';
-                tooltip.style.top = (rect.top - 30) + 'px';
-                
-                setTimeout(() => {
-                    document.body.removeChild(tooltip);
-                }, 2000);
-            });
-        });
-    });
-}
-
-function copyEmail() {
-    const email = 'mazihan880@stu.xjtu.edu.cn';
-    navigator.clipboard.writeText(email).then(() => {
-        alert('Email copied to clipboard!');
-    });
-}
-
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    populatePublications();
-    handleProfileImageError();
-    addSmoothScrolling();
-    addScrollAnimations();
-    addCopyEmailFeature();
-});
-
-// Export functions for potential external use
-window.PersonalWebsite = {
-    updatePublications: populatePublications,
-    updateLastUpdated: updateLastUpdated
-};
+document.getElementById('current-year').textContent = new Date().getFullYear();
