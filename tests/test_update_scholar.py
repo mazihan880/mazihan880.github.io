@@ -1,4 +1,6 @@
 import unittest
+from contextlib import redirect_stdout
+from io import StringIO
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from urllib.error import HTTPError
@@ -73,11 +75,12 @@ class FetchProfileTests(unittest.TestCase):
             output = Path(directory) / "scholar.json"
             output.write_text('{"total_citations": 42}\n', encoding="utf-8")
 
-            updated = update_scholar.update_snapshot(
-                fetcher=blocked_fetcher,
-                output=output,
-                allow_stale=True,
-            )
+            with redirect_stdout(StringIO()):
+                updated = update_scholar.update_snapshot(
+                    fetcher=blocked_fetcher,
+                    output=output,
+                    allow_stale=True,
+                )
 
             self.assertFalse(updated)
             self.assertEqual(output.read_text(encoding="utf-8"), '{"total_citations": 42}\n')
