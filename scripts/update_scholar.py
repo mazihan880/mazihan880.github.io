@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from datetime import datetime, timezone
 from html.parser import HTMLParser
@@ -132,8 +133,14 @@ def fetch_profile(opener=urlopen) -> ScholarParser:
     raise RuntimeError("Google Scholar profile fetch failed: " + "; ".join(failures))
 
 
-def main() -> None:
-    parser = fetch_profile()
+def update_snapshot(fetcher=fetch_profile, output: Path = OUTPUT, allow_stale: bool = False) -> bool:
+    try:
+        parser = fetcher()
+    except RuntimeError as error:
+        if allow_stale and output.is_file():
+            print(f"::warning::{error}. Keeping the last valid Scholar snapshot.")
+            return False
+        raise
 
     payload = {
         "profile_id": PROFILE_ID,
@@ -142,9 +149,14 @@ def main() -> None:
         "total_citations": parser.total_citations,
         "papers": parser.rows,
     }
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Updated {len(parser.rows)} papers; total citations: {parser.total_citations}")
+    return True
+
+
+def main() -> None:
+    update_snapshot(allow_stale=os.environ.get("ALLOW_STALE_SCHOLAR") == "1")
 
 
 if __name__ == "__main__":

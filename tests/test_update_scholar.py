@@ -1,4 +1,6 @@
 import unittest
+from pathlib import Path
+from tempfile import TemporaryDirectory
 from urllib.error import HTTPError
 
 from scripts import update_scholar
@@ -62,6 +64,23 @@ class FetchProfileTests(unittest.TestCase):
         scholar_url = parser.rows[0]["scholar_url"]
         self.assertTrue(scholar_url.startswith("https://scholar.google.com/citations?"))
         self.assertNotIn("_x_tr_", scholar_url)
+
+    def test_keeps_existing_snapshot_when_all_sources_are_blocked(self):
+        def blocked_fetcher():
+            raise RuntimeError("all sources returned 403")
+
+        with TemporaryDirectory() as directory:
+            output = Path(directory) / "scholar.json"
+            output.write_text('{"total_citations": 42}\n', encoding="utf-8")
+
+            updated = update_scholar.update_snapshot(
+                fetcher=blocked_fetcher,
+                output=output,
+                allow_stale=True,
+            )
+
+            self.assertFalse(updated)
+            self.assertEqual(output.read_text(encoding="utf-8"), '{"total_citations": 42}\n')
 
 
 if __name__ == "__main__":
