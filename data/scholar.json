@@ -1,30 +1,30 @@
 {
   "profile_id": "xKOhjOkAAAAJ",
   "profile_url": "https://scholar.google.com/citations?hl=en&user=xKOhjOkAAAAJ&pagesize=100",
-  "fetched_at": "2026-08-01T06:56:35+00:00",
-  "total_citations": 1128,
+  "fetched_at": "2026-08-03T06:50:31+00:00",
+  "total_citations": 1153,
   "papers": [
     {
       "title": "Opencompass: A universal evaluation platform for foundation models",
-      "citations": 513,
+      "citations": 518,
       "year": "2023",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:LkGwnXOMwfcC"
     },
     {
       "title": "Twibot-22: Towards graph-based twitter bot detection",
-      "citations": 253,
+      "citations": 261,
       "year": "2022",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:u-x6o8ySG0sC"
     },
     {
       "title": "Intern-s1: A scientific multimodal foundation model",
-      "citations": 90,
+      "citations": 97,
       "year": "2025",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:ufrVoPGSRksC"
     },
     {
       "title": "Event-radar: Event-driven multi-view learning for multimodal fake news detection",
-      "citations": 85,
+      "citations": 86,
       "year": "2024",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:_FxGoFyzp5QC"
     },
@@ -36,19 +36,19 @@
     },
     {
       "title": "Mitigating world biases: A multimodal multi-view debiasing framework for fake news video detection",
-      "citations": 40,
+      "citations": 43,
       "year": "2024",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:d1gkVwhDpl0C"
     },
     {
-      "title": "Imol: Incomplete-modality-tolerant learning for multi-domain fake news video detection",
+      "title": "IMOL: incomplete-modality-tolerant learning for multi-domain fake news video detection",
       "citations": 16,
       "year": "2025",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:YsMSGLbcyi4C"
     },
     {
       "title": "Rethinking verification for llm code generation: From generation to testing",
-      "citations": 14,
+      "citations": 15,
       "year": "2026",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:ULOm3_A8WrAC"
     },
@@ -59,16 +59,16 @@
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:2osOgNQ5qMEC"
     },
     {
-      "title": "SAGE: Scale-Aware Gradual Evolution for Continual Knowledge Graph Embedding",
-      "citations": 13,
-      "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:eQOLeE2rZwMC"
-    },
-    {
-      "title": "Understand, Refine and Summarize: Multi-View Knowledge Progressive Enhancement Learning for Fake News Video Detection",
+      "title": "Understand, refine and summarize: multi-view knowledge progressive enhancement learning for fake news video detection",
       "citations": 12,
       "year": "2025",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:roLk4NBRz8UC"
+    },
+    {
+      "title": "Sage: Scale-aware gradual evolution for continual knowledge graph embedding",
+      "citations": 12,
+      "year": "2025",
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:eQOLeE2rZwMC"
     },
     {
       "title": "Learning multimodal attention mixed with frequency domain information as detector for fake news detection",
@@ -77,13 +77,13 @@
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:qjMakFHDy7sC"
     },
     {
-      "title": "ATLAS: A High-Difficulty, Multidisciplinary Benchmark for Frontier Scientific Reasoning",
-      "citations": 7,
+      "title": "ATLAS: A high-difficulty, multidisciplinary benchmark for frontier scientific reasoning",
+      "citations": 8,
       "year": "2025",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:UebtZRa9Y70C"
     },
     {
-      "title": "Harmony in Chaos: A Progressive Noise-Resilient Network for Robust Fake News Video Detection",
+      "title": "Harmony in chaos: A progressive noise-resilient network for robust fake news video detection",
       "citations": 5,
       "year": "2025",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:5nxA0vEk-isC"
@@ -95,14 +95,8 @@
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:kNdYIx-mwKoC"
     },
     {
-      "title": "Deciphering Trajectory-Aided LLM Reasoning: An Optimization Perspective",
+      "title": "Graphing the truth: Harnessing causal insights for advanced multimodal fake news detection",
       "citations": 3,
-      "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:W7OEmFMy1HYC"
-    },
-    {
-      "title": "Graphing the Truth: Harnessing Causal Insights for Advanced Multimodal Fake News Detection",
-      "citations": 2,
       "year": "2025",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:0EnyYjriUFMC"
     },
@@ -117,6 +111,12 @@
       "citations": 2,
       "year": "2025",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:Y0pCki6q_DkC"
+    },
+    {
+      "title": "Deciphering Trajectory-Aided LLM Reasoning: An Optimization Perspective",
+      "citations": 2,
+      "year": "2025",
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:W7OEmFMy1HYC"
     },
     {
       "title": "Bridging interests and truth: Towards mitigating fake news with personalized and truthful recommendations",

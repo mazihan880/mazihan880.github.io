@@ -8,7 +8,7 @@ import re
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import parse_qsl, urlencode, urljoin, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
 
 
@@ -17,7 +17,27 @@ PROFILE_URL = (
     "https://scholar.google.com/citations"
     f"?hl=en&user={PROFILE_ID}&pagesize=100"
 )
+TRANSLATED_PROFILE_URL = (
+    "https://scholar-google-com.translate.goog/citations"
+    f"?hl=en&user={PROFILE_ID}&pagesize=100"
+    "&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en"
+)
+FETCH_URLS = (PROFILE_URL, TRANSLATED_PROFILE_URL)
 OUTPUT = Path(__file__).resolve().parents[1] / "data" / "scholar.json"
+
+
+def canonicalize_scholar_url(href: str) -> str:
+    resolved = urljoin(PROFILE_URL, href)
+    parsed = urlsplit(resolved)
+    if parsed.netloc != "scholar-google-com.translate.goog":
+        return resolved
+
+    query = urlencode([
+        (key, value)
+        for key, value in parse_qsl(parsed.query, keep_blank_values=True)
+        if not key.startswith("_x_tr_")
+    ])
+    return urlunsplit(("https", "scholar.google.com", parsed.path, query, ""))
 
 
 class ScholarParser(HTMLParser):
@@ -46,7 +66,7 @@ class ScholarParser(HTMLParser):
 
         if tag == "a" and "gsc_a_at" in classes:
             self._field = "title"
-            self._row["scholar_url"] = urljoin(PROFILE_URL, attributes.get("href") or "")
+            self._row["scholar_url"] = canonicalize_scholar_url(attributes.get("href") or "")
             self._buffer = []
         elif tag == "a" and "gsc_a_ac" in classes:
             self._field = "citations"
@@ -75,23 +95,37 @@ class ScholarParser(HTMLParser):
             self._row = None
 
 
-def main() -> None:
-    request = Request(
-        PROFILE_URL,
-        headers={
-            "User-Agent": (
-                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                "AppleWebKit/537.36 Chrome/126.0 Safari/537.36"
-            )
-        },
-    )
-    with urlopen(request, timeout=30) as response:
-        html = response.read().decode("utf-8", errors="replace")
+def fetch_profile(opener=urlopen) -> ScholarParser:
+    failures: list[str] = []
 
-    parser = ScholarParser()
-    parser.feed(html)
-    if not parser.rows:
-        raise RuntimeError("Google Scholar returned no publications; snapshot was not changed.")
+    for url in FETCH_URLS:
+        request = Request(
+            url,
+            headers={
+                "User-Agent": (
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                    "AppleWebKit/537.36 Chrome/126.0 Safari/537.36"
+                )
+            },
+        )
+        try:
+            with opener(request, timeout=30) as response:
+                html = response.read().decode("utf-8", errors="replace")
+        except Exception as error:
+            failures.append(f"{url}: {error}")
+            continue
+
+        parser = ScholarParser()
+        parser.feed(html)
+        if parser.rows:
+            return parser
+        failures.append(f"{url}: response contained no publications")
+
+    raise RuntimeError("Google Scholar profile fetch failed: " + "; ".join(failures))
+
+
+def main() -> None:
+    parser = fetch_profile()
 
     payload = {
         "profile_id": PROFILE_ID,
