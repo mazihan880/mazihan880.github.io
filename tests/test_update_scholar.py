@@ -40,7 +40,7 @@ class FetchProfileTests(unittest.TestCase):
 
         def fake_urlopen(request, timeout):
             requested_urls.append(request.full_url)
-            if request.full_url == update_scholar.PROFILE_URL:
+            if request.full_url != update_scholar.TRANSLATED_PROFILE_URL:
                 raise HTTPError(request.full_url, 403, "Forbidden", {}, None)
             return FakeResponse(VALID_PROFILE_HTML)
 

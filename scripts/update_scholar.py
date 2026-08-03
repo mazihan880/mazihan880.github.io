@@ -22,7 +22,15 @@ TRANSLATED_PROFILE_URL = (
     f"?hl=en&user={PROFILE_ID}&pagesize=100"
     "&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en"
 )
-FETCH_URLS = (PROFILE_URL, TRANSLATED_PROFILE_URL)
+REGIONAL_PROFILE_URLS = tuple(
+    f"https://{host}/citations?hl=en&user={PROFILE_ID}&pagesize=100"
+    for host in (
+        "scholar.google.com.sg",
+        "scholar.google.co.uk",
+        "scholar.google.ca",
+    )
+)
+FETCH_URLS = (PROFILE_URL, *REGIONAL_PROFILE_URLS, TRANSLATED_PROFILE_URL)
 OUTPUT = Path(__file__).resolve().parents[1] / "data" / "scholar.json"
 
 
