@@ -1,56 +1,56 @@
 {
   "profile_id": "xKOhjOkAAAAJ",
   "profile_url": "https://scholar.google.com/citations?hl=en&user=xKOhjOkAAAAJ&pagesize=100",
-  "fetched_at": "2026-08-03T06:55:41+00:00",
-  "total_citations": 1153,
+  "fetched_at": "2026-08-10T04:59:46+00:00",
+  "total_citations": 1176,
   "papers": [
     {
       "title": "Opencompass: A universal evaluation platform for foundation models",
-      "citations": 518,
+      "citations": 526,
       "year": "2023",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:LkGwnXOMwfcC"
     },
     {
       "title": "Twibot-22: Towards graph-based twitter bot detection",
-      "citations": 261,
+      "citations": 267,
       "year": "2022",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:u-x6o8ySG0sC"
     },
     {
       "title": "Intern-s1: A scientific multimodal foundation model",
-      "citations": 97,
+      "citations": 101,
       "year": "2025",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:ufrVoPGSRksC"
     },
     {
       "title": "Event-radar: Event-driven multi-view learning for multimodal fake news detection",
-      "citations": 86,
+      "citations": 88,
       "year": "2024",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:_FxGoFyzp5QC"
     },
     {
       "title": "Each fake news is fake in its own way: An attribution multi-granularity benchmark for multimodal fake news detection",
-      "citations": 44,
+      "citations": 45,
       "year": "2025",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:Tyk-4Ss8FVUC"
     },
     {
       "title": "Mitigating world biases: A multimodal multi-view debiasing framework for fake news video detection",
-      "citations": 43,
+      "citations": 44,
       "year": "2024",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:d1gkVwhDpl0C"
+    },
+    {
+      "title": "Rethinking verification for llm code generation: From generation to testing",
+      "citations": 16,
+      "year": "2026",
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:ULOm3_A8WrAC"
     },
     {
       "title": "IMOL: incomplete-modality-tolerant learning for multi-domain fake news video detection",
       "citations": 16,
       "year": "2025",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:YsMSGLbcyi4C"
-    },
-    {
-      "title": "Rethinking verification for llm code generation: From generation to testing",
-      "citations": 15,
-      "year": "2026",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:ULOm3_A8WrAC"
     },
     {
       "title": "How do social bots participate in misinformation spread? A comprehensive dataset and analysis",
