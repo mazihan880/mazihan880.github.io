@@ -75,9 +75,9 @@
         <aside class="signal-bar" aria-label="Recent highlights">
             <span class="signal-label">Latest signals</span>
             <div class="signal-track">
+                <p><time datetime="2026-08">08.2026</time> Two first / co-first-author papers accepted to EMNLP Findings</p>
                 <p><time datetime="2025-12">12.2025</time> China Association for Science and Technology Young Talent Program</p>
                 <p><time datetime="2025-11">11.2025</time> DICE accepted by IEEE TIFS</p>
-                <p><time datetime="2025-09">09.2025</time> SAGA accepted by NeurIPS 2025</p>
             </div>
         </aside>
 
@@ -125,6 +125,10 @@
             <div class="news-grid">
                 <ol class="news-list reveal" aria-label="Recent academic news">
                     <li>
+                        <time datetime="2026-08">Aug 2026</time>
+                        <div><span>Conference acceptances</span><h3>🎉 I’m delighted that two of our papers were accepted to EMNLP 2026 Findings.</h3><p>One is my first-author paper, “Beyond the Wrong Bit,” and the other is my co-first-author paper, “CompassJudger-2.”</p></div>
+                    </li>
+                    <li>
                         <time datetime="2025-12">Dec 2025</time>
                         <div><span>Honor</span><h3>🏅 I’m honored to be selected for the CAST Young Talent Cultivation Program.</h3><p>中国科协青年科技人才培育工程博士生专项计划。</p></div>
                     </li>
@@ -163,13 +167,43 @@
                     <h2>First &amp; co-first author work.</h2>
                 </div>
                 <div class="publication-filter" role="group" aria-label="Filter publications">
-                    <button type="button" class="is-active" data-filter="all" aria-pressed="true">All <span>08</span></button>
-                    <button type="button" data-filter="code-agent" aria-pressed="false">Code &amp; agents <span>03</span></button>
+                    <button type="button" class="is-active" data-filter="all" aria-pressed="true">All <span>10</span></button>
+                    <button type="button" data-filter="code-agent" aria-pressed="false">Code &amp; agents <span>05</span></button>
                     <button type="button" data-filter="misinformation" aria-pressed="false">Misinformation <span>05</span></button>
                 </div>
             </div>
 
             <div class="publication-list">
+                <article class="pub-card reveal" data-topic="code-agent">
+                    <div class="pub-visual" role="img" aria-label="PRIMA training workflow for Beyond the Wrong Bit">
+                        <img src="assets/publications/prima.png" alt="PRIMA workflow for failure-state decoding and prefix-repair supervision" loading="lazy">
+                        <span class="visual-label">Workflow / PRIMA</span>
+                    </div>
+                    <div class="pub-copy">
+                        <div class="pub-meta"><span>EMNLP Findings · 2026</span><span class="ccf-mark ccf-b">CCF-B</span><span>First author</span></div>
+                        <h3>Beyond the Wrong Bit: Failure States and the Supervision Unit in Verifiable Reasoning</h3>
+                        <p class="authors"><strong>Zihan Ma</strong>, Zhuoyi Lin, Minnan Luo, Xiaoxuan Guo, Wenya Wang</p>
+                        <p class="tldr"><span>TL;DR</span> PRIMA separates repairable failures into inheritable prefixes and divergent suffixes, turning coarse pass-or-fail feedback into localized supervision for verifiable reasoning.</p>
+                        <div class="pub-links"><span class="live-stat">Paper forthcoming</span></div>
+                    </div>
+                    <span class="pub-number">01</span>
+                </article>
+
+                <article class="pub-card reveal" data-topic="code-agent">
+                    <a class="pub-visual" href="https://arxiv.org/abs/2507.09104" target="_blank" rel="noopener" aria-label="Read CompassJudger-2">
+                        <img src="assets/publications/compassjudger-2.png" alt="CompassJudger-2 objective, subjective, and rubric-refinement data construction pipeline" loading="lazy">
+                        <span class="visual-label">Pipeline / CompassJudger-2</span>
+                    </a>
+                    <div class="pub-copy">
+                        <div class="pub-meta"><span>EMNLP Findings · 2026</span><span class="ccf-mark ccf-b">CCF-B</span><span>Co-first author</span></div>
+                        <h3><a href="https://arxiv.org/abs/2507.09104" target="_blank" rel="noopener">CompassJudger-2: A Holistic Approach Towards Generalist Judge Model</a></h3>
+                        <p class="authors">Taolin Zhang*, <strong>Zihan Ma*</strong>, Maosong Cao, Shudong Liu, Junnan Liu, Songyang Zhang, Kai Chen</p>
+                        <p class="tldr"><span>TL;DR</span> CompassJudger-2 unifies objective verification, subjective evaluation, and rubric refinement through task-specific data construction, producing a more robust generalist judge model.</p>
+                        <div class="pub-links"><a href="https://arxiv.org/abs/2507.09104" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/open-compass/CompassJudger" target="_blank" rel="noopener">Code ↗</a><span class="live-stat" data-github-repo="open-compass/CompassJudger">GitHub stars · …</span><span class="live-stat" data-hf-models="opencompass/CompassJudger-2-7B-Instruct,opencompass/CompassJudger-2-32B-Instruct">HF downloads · …</span></div>
+                    </div>
+                    <span class="pub-number">02</span>
+                </article>
+
                 <article class="pub-card reveal" data-topic="misinformation">
                     <a class="pub-visual" href="https://ieeexplore.ieee.org/document/11269908" target="_blank" rel="noopener" aria-label="Read Graphing the Truth">
                         <img src="assets/publications/dice.png" alt="DICE multimodal graph construction and causal disentanglement pipeline" loading="lazy">
@@ -182,7 +216,7 @@
                         <p class="tldr"><span>TL;DR</span> DICE learns to separate causal multimodal signals from spurious bias with graph masks, improving robustness under domain and distribution shifts.</p>
                         <div class="pub-links"><a href="https://ieeexplore.ieee.org/document/11269908" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/mazihan880/DICE_Code" target="_blank" rel="noopener">Code ↗</a></div>
                     </div>
-                    <span class="pub-number">01</span>
+                    <span class="pub-number">03</span>
                 </article>
 
                 <article class="pub-card reveal" data-topic="code-agent">
@@ -197,7 +231,7 @@
                         <p class="tldr"><span>TL;DR</span> A two-axis benchmark and stateful sandbox reveal that concealed intent erodes safety, while capability limits can make harder tasks look deceptively safe.</p>
                         <div class="pub-links"><a href="https://arxiv.org/abs/2511.08487" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/open-compass/OASIS" target="_blank" rel="noopener">Code ↗</a></div>
                     </div>
-                    <span class="pub-number">02</span>
+                    <span class="pub-number">04</span>
                 </article>
 
                 <article class="pub-card reveal" data-topic="code-agent">
@@ -212,7 +246,7 @@
                         <p class="tldr"><span>TL;DR</span> SAGA combines correct programs and human bugs to synthesize diverse adversarial tests that catch failures missed by standard code benchmarks.</p>
                         <div class="pub-links"><a href="https://arxiv.org/abs/2507.06920" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/open-compass/SAGA" target="_blank" rel="noopener">Code ↗</a><span class="live-stat" data-github-repo="open-compass/SAGA">GitHub stars · …</span><span class="live-stat" data-hf-datasets="opencompass/CodeForce_SAGA,opencompass/CodeCompass">HF downloads · …</span></div>
                     </div>
-                    <span class="pub-number">03</span>
+                    <span class="pub-number">05</span>
                 </article>
 
                 <article class="pub-card reveal" data-topic="misinformation">
@@ -227,7 +261,7 @@
                         <p class="tldr"><span>TL;DR</span> PRISM uses veracity-aware representations and fake-news signals as negative diffusion prompts to balance user interests with truthful recommendations.</p>
                         <div class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3726302.3729912" target="_blank" rel="noopener">Paper ↗</a></div>
                     </div>
-                    <span class="pub-number">04</span>
+                    <span class="pub-number">06</span>
                 </article>
 
                 <article class="pub-card reveal" data-topic="code-agent">
@@ -242,7 +276,7 @@
                         <p class="tldr"><span>TL;DR</span> Editorials, code, and tests expose LLM self-consistency — and the systematic gap between model cognition and the diversity of human programming.</p>
                         <div class="pub-links"><a href="https://arxiv.org/abs/2507.06138" target="_blank" rel="noopener">Paper ↗</a></div>
                     </div>
-                    <span class="pub-number">05</span>
+                    <span class="pub-number">07</span>
                 </article>
 
                 <article class="pub-card reveal" data-topic="misinformation">
@@ -257,7 +291,7 @@
                         <p class="tldr"><span>TL;DR</span> AMG moves beyond binary labels by identifying how multimodal news is fake, enabling fine-grained detection and attribution with aligned clues.</p>
                         <div class="pub-links"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/31999" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/mazihan880/AMG-An-Attributing-Multi-modal-Fake-News-Dataset" target="_blank" rel="noopener">Code ↗</a><span class="live-stat" data-github-repo="mazihan880/AMG-An-Attributing-Multi-modal-Fake-News-Dataset">GitHub stars · …</span></div>
                     </div>
-                    <span class="pub-number">06</span>
+                    <span class="pub-number">08</span>
                 </article>
 
                 <article class="pub-card reveal" data-topic="misinformation">
@@ -272,7 +306,7 @@
                         <p class="tldr"><span>TL;DR</span> Event-level graphs fuse consistency, emotion, manipulation, and view credibility to detect fake news robustly in noisy social-media data.</p>
                         <div class="pub-links"><a href="https://aclanthology.org/2024.acl-long.316/" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/mazihan880/Event-Radar" target="_blank" rel="noopener">Code ↗</a><span class="live-stat" data-github-repo="mazihan880/Event-Radar">GitHub stars · …</span></div>
                     </div>
-                    <span class="pub-number">07</span>
+                    <span class="pub-number">09</span>
                 </article>
 
                 <article class="pub-card reveal" data-topic="misinformation">
@@ -287,7 +321,7 @@
                         <p class="tldr"><span>TL;DR</span> Token-level image-text alignment guides high-frequency manipulation cues, exposing deceptive news that remains semantically consistent.</p>
                         <div class="pub-links"><a href="https://ieeexplore.ieee.org/document/10687912" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/mazihan880/MHFFD" target="_blank" rel="noopener">Code ↗</a></div>
                     </div>
-                    <span class="pub-number">08</span>
+                    <span class="pub-number">10</span>
                 </article>
             </div>
             <p class="publication-note">* Equal contribution. Featured cards above highlight first- and co-first-author work; the complete collaborative record follows.</p>

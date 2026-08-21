@@ -172,6 +172,13 @@ async function fetchHuggingFaceDownloads(dataset) {
     return Number(data.downloads || 0);
 }
 
+async function fetchHuggingFaceModelDownloads(model) {
+    const response = await fetch(`https://huggingface.co/api/models/${model}`, { cache: 'no-store' });
+    if (!response.ok) throw new Error('Hugging Face model stats unavailable');
+    const data = await response.json();
+    return Number(data.downloads || 0);
+}
+
 async function updateLiveStats() {
     document.querySelectorAll('[data-github-repo]').forEach(async (element) => {
         try {
@@ -186,6 +193,17 @@ async function updateLiveStats() {
         try {
             const datasets = element.dataset.hfDatasets.split(',').map((item) => item.trim()).filter(Boolean);
             const downloads = await Promise.all(datasets.map(fetchHuggingFaceDownloads));
+            const total = downloads.reduce((sum, count) => sum + count, 0);
+            element.textContent = `HF downloads · ${formatCompact(total)}`;
+        } catch (error) {
+            element.textContent = 'HF downloads · live';
+        }
+    });
+
+    document.querySelectorAll('[data-hf-models]').forEach(async (element) => {
+        try {
+            const models = element.dataset.hfModels.split(',').map((item) => item.trim()).filter(Boolean);
+            const downloads = await Promise.all(models.map(fetchHuggingFaceModelDownloads));
             const total = downloads.reduce((sum, count) => sum + count, 0);
             element.textContent = `HF downloads · ${formatCompact(total)}`;
         } catch (error) {
