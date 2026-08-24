@@ -1,140 +1,140 @@
 {
   "profile_id": "xKOhjOkAAAAJ",
   "profile_url": "https://scholar.google.com/citations?hl=en&user=xKOhjOkAAAAJ&pagesize=100",
-  "fetched_at": "2026-08-10T04:59:46+00:00",
-  "total_citations": 1176,
+  "fetched_at": "2026-08-24T04:10:54+00:00",
+  "total_citations": 1196,
   "papers": [
     {
       "title": "Opencompass: A universal evaluation platform for foundation models",
-      "citations": 526,
+      "citations": 531,
       "year": "2023",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:LkGwnXOMwfcC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3ALkGwnXOMwfcC"
     },
     {
       "title": "Twibot-22: Towards graph-based twitter bot detection",
-      "citations": 267,
+      "citations": 272,
       "year": "2022",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:u-x6o8ySG0sC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3Au-x6o8ySG0sC"
     },
     {
       "title": "Intern-s1: A scientific multimodal foundation model",
-      "citations": 101,
+      "citations": 103,
       "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:ufrVoPGSRksC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3AufrVoPGSRksC"
     },
     {
       "title": "Event-radar: Event-driven multi-view learning for multimodal fake news detection",
-      "citations": 88,
+      "citations": 89,
       "year": "2024",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:_FxGoFyzp5QC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3A_FxGoFyzp5QC"
     },
     {
       "title": "Each fake news is fake in its own way: An attribution multi-granularity benchmark for multimodal fake news detection",
-      "citations": 45,
+      "citations": 49,
       "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:Tyk-4Ss8FVUC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3ATyk-4Ss8FVUC"
     },
     {
       "title": "Mitigating world biases: A multimodal multi-view debiasing framework for fake news video detection",
-      "citations": 44,
+      "citations": 45,
       "year": "2024",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:d1gkVwhDpl0C"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3Ad1gkVwhDpl0C"
+    },
+    {
+      "title": "IMOL: incomplete-modality-tolerant learning for multi-domain fake news video detection",
+      "citations": 17,
+      "year": "2025",
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3AYsMSGLbcyi4C"
     },
     {
       "title": "Rethinking verification for llm code generation: From generation to testing",
       "citations": 16,
       "year": "2026",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:ULOm3_A8WrAC"
-    },
-    {
-      "title": "IMOL: incomplete-modality-tolerant learning for multi-domain fake news video detection",
-      "citations": 16,
-      "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:YsMSGLbcyi4C"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3AULOm3_A8WrAC"
     },
     {
       "title": "How do social bots participate in misinformation spread? A comprehensive dataset and analysis",
       "citations": 13,
       "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:2osOgNQ5qMEC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3A2osOgNQ5qMEC"
+    },
+    {
+      "title": "Sage: Scale-aware gradual evolution for continual knowledge graph embedding",
+      "citations": 13,
+      "year": "2025",
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3AeQOLeE2rZwMC"
     },
     {
       "title": "Understand, refine and summarize: multi-view knowledge progressive enhancement learning for fake news video detection",
       "citations": 12,
       "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:roLk4NBRz8UC"
-    },
-    {
-      "title": "Sage: Scale-aware gradual evolution for continual knowledge graph embedding",
-      "citations": 12,
-      "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:eQOLeE2rZwMC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3AroLk4NBRz8UC"
     },
     {
       "title": "Learning multimodal attention mixed with frequency domain information as detector for fake news detection",
       "citations": 10,
       "year": "2024",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:qjMakFHDy7sC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3AqjMakFHDy7sC"
     },
     {
       "title": "ATLAS: A high-difficulty, multidisciplinary benchmark for frontier scientific reasoning",
       "citations": 8,
       "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:UebtZRa9Y70C"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3AUebtZRa9Y70C"
     },
     {
       "title": "Harmony in chaos: A progressive noise-resilient network for robust fake news video detection",
       "citations": 5,
       "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:5nxA0vEk-isC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3A5nxA0vEk-isC"
     },
     {
       "title": "From manipulation to mistrust: Explaining diverse micro-video misinformation for robust debunking in the wild",
       "citations": 3,
       "year": "2026",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:kNdYIx-mwKoC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3AkNdYIx-mwKoC"
     },
     {
       "title": "Graphing the truth: Harnessing causal insights for advanced multimodal fake news detection",
       "citations": 3,
       "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:0EnyYjriUFMC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3A0EnyYjriUFMC"
     },
     {
       "title": "Difar: Enhancing multimodal misinformation detection with diverse, factual, and relevant rationales",
       "citations": 2,
       "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:WF5omc3nYNoC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3AWF5omc3nYNoC"
     },
     {
       "title": "Coding Triangle: How Does Large Language Model Understand Code?",
       "citations": 2,
       "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:Y0pCki6q_DkC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3AY0pCki6q_DkC"
     },
     {
       "title": "Deciphering Trajectory-Aided LLM Reasoning: An Optimization Perspective",
       "citations": 2,
       "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:W7OEmFMy1HYC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3AW7OEmFMy1HYC"
     },
     {
       "title": "Bridging interests and truth: Towards mitigating fake news with personalized and truthful recommendations",
       "citations": 1,
       "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:IjCSPb-OGe4C"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3AIjCSPb-OGe4C"
     },
     {
       "title": "How Brittle is Agent Safety? Rethinking Agent Risk under Intent Concealment and Task Complexity",
       "citations": 0,
       "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:Se3iqnhoufwC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3ASe3iqnhoufwC"
     },
     {
       "title": "Reasoning as Meta-Learning: An Optimization Perspective to Decipher Long CoT Reasoning in LLMs",
       "citations": 0,
       "year": "",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:3fE2CSJIrl8C"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ%3A3fE2CSJIrl8C"
     }
   ]
 }
