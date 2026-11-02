@@ -1,44 +1,50 @@
 {
   "profile_id": "xKOhjOkAAAAJ",
   "profile_url": "https://scholar.google.com/citations?hl=en&user=xKOhjOkAAAAJ&pagesize=100",
-  "fetched_at": "2026-10-19T09:05:53+00:00",
-  "total_citations": 1287,
+  "fetched_at": "2026-11-02T11:27:11+00:00",
+  "total_citations": 1319,
   "papers": [
     {
       "title": "Opencompass: A universal evaluation platform for foundation models",
-      "citations": 550,
+      "citations": 557,
       "year": "2023",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:LkGwnXOMwfcC"
     },
     {
       "title": "Twibot-22: Towards graph-based twitter bot detection",
-      "citations": 286,
+      "citations": 296,
       "year": "2022",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:u-x6o8ySG0sC"
     },
     {
       "title": "Intern-s1: A scientific multimodal foundation model",
-      "citations": 121,
+      "citations": 122,
       "year": "2025",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:ufrVoPGSRksC"
     },
     {
       "title": "Event-radar: Event-driven multi-view learning for multimodal fake news detection",
-      "citations": 100,
+      "citations": 105,
       "year": "2024",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:_FxGoFyzp5QC"
     },
     {
       "title": "Each fake news is fake in its own way: An attribution multi-granularity benchmark for multimodal fake news detection",
-      "citations": 57,
+      "citations": 58,
       "year": "2025",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:Tyk-4Ss8FVUC"
     },
     {
       "title": "Mitigating world biases: A multimodal multi-view debiasing framework for fake news video detection",
-      "citations": 48,
+      "citations": 49,
       "year": "2024",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:d1gkVwhDpl0C"
+    },
+    {
+      "title": "Rethinking verification for llm code generation: From generation to testing",
+      "citations": 20,
+      "year": "2026",
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:ULOm3_A8WrAC"
     },
     {
       "title": "IMOL: incomplete-modality-tolerant learning for multi-domain fake news video detection",
@@ -47,14 +53,8 @@
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:YsMSGLbcyi4C"
     },
     {
-      "title": "Rethinking verification for llm code generation: From generation to testing",
-      "citations": 17,
-      "year": "2026",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:ULOm3_A8WrAC"
-    },
-    {
       "title": "How do social bots participate in misinformation spread? A comprehensive dataset and analysis",
-      "citations": 16,
+      "citations": 18,
       "year": "2025",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:2osOgNQ5qMEC"
     },
@@ -83,6 +83,12 @@
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:qjMakFHDy7sC"
     },
     {
+      "title": "Graphing the truth: Harnessing causal insights for advanced multimodal fake news detection",
+      "citations": 5,
+      "year": "2025",
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:0EnyYjriUFMC"
+    },
+    {
       "title": "Harmony in chaos: A progressive noise-resilient network for robust fake news video detection",
       "citations": 5,
       "year": "2025",
@@ -95,16 +101,16 @@
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:kNdYIx-mwKoC"
     },
     {
-      "title": "Graphing the truth: Harnessing causal insights for advanced multimodal fake news detection",
-      "citations": 4,
-      "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:0EnyYjriUFMC"
-    },
-    {
       "title": "Difar: Enhancing multimodal misinformation detection with diverse, factual, and relevant rationales",
       "citations": 2,
       "year": "2025",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:WF5omc3nYNoC"
+    },
+    {
+      "title": "Bridging interests and truth: Towards mitigating fake news with personalized and truthful recommendations",
+      "citations": 2,
+      "year": "2025",
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:IjCSPb-OGe4C"
     },
     {
       "title": "Coding Triangle: How Does Large Language Model Understand Code?",
@@ -125,10 +131,10 @@
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:Se3iqnhoufwC"
     },
     {
-      "title": "Bridging interests and truth: Towards mitigating fake news with personalized and truthful recommendations",
-      "citations": 1,
-      "year": "2025",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:IjCSPb-OGe4C"
+      "title": "Reasoning as Meta-Learning: Understanding Long Chain-of-Thought Reasoning in LLMs through an Optimization Lens",
+      "citations": 0,
+      "year": "",
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xKOhjOkAAAAJ&pagesize=100&citation_for_view=xKOhjOkAAAAJ:YOwf2qJgpHMC"
     },
     {
       "title": "Reasoning as Meta-Learning: An Optimization Perspective to Decipher Long CoT Reasoning in LLMs",
